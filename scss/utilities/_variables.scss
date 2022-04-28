@@ -1,0 +1,41 @@
+//variable 
+$fontSizePromedioCelular: 12px;
+
+$fontSizePromedioTablet: 20px;
+
+
+
+
+//mixin con variables
+@mixin tamaño ($ancho, $largo) {
+    width: $ancho;
+    height: $largo;
+}
+
+
+//mixin funcion
+@mixin flexCentroCentro {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+//m
+@mixin autoEmparejamiento {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+//map
+$botonNav:(
+    radioNav: 30px,
+    fondoNav: white,
+    bordeNav: 2px solid black,
+    );
+
+$botonRedes:(
+    fondoRedes: rgb(213, 227, 255),
+    bordeRedes: 5px ridge rgb(186, 253, 255),
+    );

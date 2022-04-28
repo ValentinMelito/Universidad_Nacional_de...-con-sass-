@@ -27,8 +27,8 @@ body {
         background-color: #666699; }
         body .contenedor header .color-encabezado .imagen {
           margin-left: 5mm;
-          height: 90px;
-          width: 90px; }
+          width: 90px;
+          height: 90px; }
         body .contenedor header .color-encabezado .navbar-toggler {
           background-color: white; }
         body .contenedor header .color-encabezado .palabrasEncabezado {
@@ -41,7 +41,7 @@ body {
       grid-area: h1;
       text-align: center;
       font-family: 'Times New Roman', Times, serif;
-      font-size: 20px; }
+      font-size: 23px; }
     body .contenedor h2 {
       grid-area: h2;
       text-align: center;
@@ -51,8 +51,8 @@ body {
       grid-area: main;
       margin-bottom: 10px;
       border: 3px solid black;
-      height: 400px;
       width: 300px;
+      height: 400px;
       margin-left: auto;
       margin-right: auto;
       overflow: auto;
@@ -77,8 +77,8 @@ body {
         body .contenedor footer .pieDePagina .subPieDePagina {
           padding: 5px; }
           body .contenedor footer .pieDePagina .subPieDePagina iframe {
-            height: 150px;
-            width: 300px; }
+            width: 300px;
+            height: 150px; }
         body .contenedor footer .pieDePagina .redes {
           display: flex;
           flex-flow: row wrap;
@@ -96,14 +96,14 @@ body {
             background-color: #d5e3ff;
             border: 5px ridge #bafdff;
             font-size: 13px; }
-            body .contenedor footer .pieDePagina .redes .subRedes .subRedes:hover {
+            body .contenedor footer .pieDePagina .redes .subRedes:hover {
               transform: scale(1.19);
               transition: 1.5s; }
             body .contenedor footer .pieDePagina .redes .subRedes .links {
               text-decoration: none;
               list-style: none;
               color: black;
-              font-size: 11px; }
+              font-size: 12px -1px; }
 
 /*para pantallas de tablets*/
 @media only screen and (min-width: 650px) {
@@ -111,8 +111,8 @@ body {
     top: 10px;
     margin: 5px 4mm; }
     body .contenedor header .color-encabezado .imagen {
-      height: 100px;
-      width: 120px; }
+      width: 120px;
+      height: 100px; }
     body .contenedor header .color-encabezado .palabrasEncabezado {
       justify-content: space-around; }
       body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
@@ -120,8 +120,8 @@ body {
         border: 2px solid black;
         background-color: white;
         border-radius: 30px;
-        height: 80px;
         width: 120px;
+        height: 80px;
         text-align: center; }
   body .contenedor h1 {
     font-size: 36px;
@@ -130,30 +130,23 @@ body {
     font-size: 28px;
     padding: 0px; }
   body .contenedor main {
-    height: 700px;
-    width: 500px; }
+    width: 500px;
+    height: 700px; }
     body .contenedor main .noticia {
       margin: 16px 30px;
       padding: 10px;
       font-size: 20px; }
   body .contenedor footer .pieDePagina {
     margin-top: 30px;
-    font-size: 18px; }
+    font-size: 8px; }
     body .contenedor footer .pieDePagina .subPieDePagina iframe {
-      height: 250px;
-      width: 500px; }
-    body .contenedor footer .pieDePagina .redes {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: center;
-      margin-left: auto;
-      margin-right: auto; }
-      body .contenedor footer .pieDePagina .redes .subRedes {
-        width: 150px;
-        height: 70px; }
-        body .contenedor footer .pieDePagina .redes .subRedes .links {
-          font-size: 16px; } }
+      width: 500px;
+      height: 250px; }
+    body .contenedor footer .pieDePagina .redes .subRedes {
+      width: 150px;
+      height: 70px; }
+      body .contenedor footer .pieDePagina .redes .subRedes .links {
+        font-size: 16px; } }
 
 /*fin de quering para tablets*/
 @media only screen and (min-width: 1200px) {
@@ -161,31 +154,31 @@ body {
     margin: 2mm 1cm;
     top: 5px; }
     body .contenedor header .color-encabezado .imagen {
-      height: 150px;
-      width: 170px; }
+      width: 170px;
+      height: 150px; }
     body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
       text-align: center;
       padding-left: 2mm;
       margin: 4mm 5mm;
-      height: 50px;
-      width: 170px; }
+      width: 170px;
+      height: 50px; }
   body .contenedor h1 {
     font-size: 1cm;
     padding: 0px; }
   body .contenedor h2 {
-    display: flex;
+    display: inline;
     width: 15cm;
     margin: 5mm auto 1mm;
     font-size: 0.75cm; }
   body .contenedor .fondoMain {
-    background-color: blueviolet;
+    background-image: url(../imagenes/universidad.jpg);
     margin: 0cm 1cm;
     padding: 1mm 0mm 1mm; }
     body .contenedor .fondoMain main {
       z-index: 1;
       font-size: large;
-      height: 20cm;
-      width: 15cm; }
+      width: 15cm;
+      height: 20cm; }
       body .contenedor .fondoMain main .noticia {
         margin: 1cm;
         padding: 7mm; }
@@ -197,19 +190,12 @@ body {
       body .contenedor footer .pieDePagina .subPieDePagina {
         padding: 1.3mm; }
         body .contenedor footer .pieDePagina .subPieDePagina iframe {
-          height: 300px;
-          width: 600px; }
-      body .contenedor footer .pieDePagina .redes {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto; }
-        body .contenedor footer .pieDePagina .redes .subRedes {
-          width: 4cm;
-          height: 1.8cm; }
-          body .contenedor footer .pieDePagina .redes .subRedes .links {
-            font-size: 17px; } }
+          width: 600px;
+          height: 300px; }
+      body .contenedor footer .pieDePagina .redes .subRedes {
+        width: 4cm;
+        height: 1.8cm; }
+        body .contenedor footer .pieDePagina .redes .subRedes .links {
+          font-size: 17px; } }
 
 /*fin de quering para tablets*/

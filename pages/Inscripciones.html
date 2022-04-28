@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Universidad Argentina, Universidad Publica, UN..., un.., Universidad Nacional de...,UN... inscripciones, un... Inscripciones, UN... fechas, UN... redes">
+    <meta name="description" content="¿Te sumas a nosotros? llena un formulario y vas a recibir mas informacion.">
+
+
+     <!--link framework-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>(-UN..-) Inscripciones_2023</title>
+    <link rel="stylesheet" href="../css/inscripciones.css">
+</head>
+<body>
+    <div class="contenedor">
+        
+        
+        
+        <header >
+            <nav class="navbar navbar-expand-md navbar-light  color-encabezado">
+                <div class="container-sm">
+        
+                <!--poner el logo-->
+                <a class="navbar-brand">
+                    <img src="../imagenes/LOGO.png" alt="imagen" class="imagen">
+                </a>
+                
+                <!--INICIO DEL MENU EN UN ENCABEZADO-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse palabrasEncabezado" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                    
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="../index.html">Volver al inicio</a>
+                        </li> 
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/nosotros.html">Sobre nosotros</a>
+                            </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/carreras.html">Carreras</a> 
+                            </li>
+        
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href= "../pages/egresado.html">Perfil del egresado</a>
+                            </li> 
+        
+                    </ul>
+                </div>    
+            </div>
+            </nav>
+          <!--FIN DEL MENU-->
+        </header>
+        
+        
+         
+        
+            <div class="titulo">
+                <h2 class="subTitulo">Inscripciones 2023</h2>
+            </div>
+        
+        
+        
+        
+           
+              <!--   <fieldset>
+                    <legend>Datos del ingresante</legend>-->
+        
+        <main>
+            <form action="">
+                <div class="contenido">
+                    <div class="opciones">
+                        <!--INFORMACION DEL USUARIO-->
+                        <label for="nombre">
+                                            Nombre y apellido:
+                        </label>
+                         <input type="text" name="nombre" placeholder="Nombre y apellido Completo">
+                                        
+                    </div>
+        
+                    <div class="opciones">
+                        <!--EDAD DEL USUARIO-->
+                        <label for="nacimiento">
+                        Fecha de nacimiento
+                        </label>
+                        <input type="date" name="nacimiento" >
+                            
+                    </div>
+        
+                    <div class="opciones">
+                        <!--DNI DEL USUARIO-->
+                        <label for="dni">
+                                    DNI:
+                        </label>
+                        <input type="number" value="dni" placeholder="Ingrese su DNI"  > 
+                    </div>
+        
+                    <div class="opciones">
+                        <!--INFORMACION DEL GENERO-->
+                        <label for="Sexo">
+                        Genero:
+                        </label>
+                        <div> 
+                            <!-- para que quede bien en la pagina distanciado y no hacer un grid en css-->
+
+                            <input type="radio" name="Sexo" id=""> Hombre
+                                
+                            <input type="radio" name="Sexo" id=""> Mujer
+                                
+                            <input type="radio" name="Sexo" id=""> Prefiero no decirlo
+
+                        </div>
+
+                    </div>
+                        
+                    <div class="opciones">           
+                        <!--INFORMACION DEL MAIL-->
+                        <label for="mail">
+                            Direccion email
+                        </label>   
+                        <input type="email" name="mail" placeholder="Ingrese su mail">
+                                
+                    </div>
+        
+                    <div class="opciones">
+                        <!--ELECCION DE CARRERA-->
+                        <label for="">
+                            Carrera
+                        </label>
+                        <select name="" id="">
+                            <option hidden selected> Selecciona una opción </option> <!--PARA QUE NO HAYA UNA OPCION POR DEFAULT-->
+
+                            <option value="electronica"> Ingenieria electronica </option>
+                        
+                            <option value="mecanica">Ingenieria mecanica</option>
+
+                            <option value="sistemas">Ingenieria en sistemas</option>
+
+                        </select>
+
+                    </div>
+                       
+                    <div class="opciones">
+                        <!--HORARIOS-->
+                        <label for="horarios">
+                            Preferencia de horario:
+                        </label>
+
+                        <div class="selecion">  
+                            <!-- para que quede bien en la pagina distanciado y no hacer un grid en css-->
+
+                            <input type="radio" name="horarios"> de 7 a 12
+                                    
+                            <input type="radio" name="horarios"> de 13 a 17
+                                    
+                            <input type="radio" name="horarios"> de 18 a 22
+                        </div>
+            
+                    </div>
+        
+                    <!--INFORMACION PARA EL USUARIO-->
+                    <details> Este proceso es para confirmar sus datos y luego le enviaremos un mail con mas detalles de precios y horarios</details> 
+                        
+        
+                    <div class="selecion"> 
+                        <!--botones-->
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Reiniciar">
+                    </div>
+
+                </div>     
+            </form>     
+        </main> 
+        
+        
+            <!--REDIRECCION A OTRAS PAGINAS-->
+            <div class="hipervinculos">
+                <!--REDIRECCION A CARRERAS-->
+                <div class="hijos">
+                    te dejamos un link con mas informacion sobre las <a href="carreras.html" target="_blank">carreras</a> que tenemos y que te guastaria seguir 
+                </div>    
+        
+            
+                <!--REDIRECCION A EGRESADOS-->
+                <div class="hijos">
+                    Si tienes dudas, tambien puede ir a ver el 
+                    <a href="egresado.html" target="_blank"> perfil     del egresado</a> 
+                    donde veras nuestros objetivos y logros que hemos   hecho con nuestros alumnos
+                </div>    
+            
+        
+                <!--REDIRECCION A NOSOTROS-->
+                <div class="hijos">
+                    Tambien te dejamos mas informacion <a   href="nosotros.html" target="_blank">sobre    quienes</a>  somos y desde cuando funcionamos
+                </div>    
+            
+        
+                <!--REDIRECCION A INDEX-->
+                <div class="hijos">
+                    <a href="../index.html">
+                        Volver al inicio
+                    </a>
+                </div>
+        
+            </div>
+        
+        
+        
+            <!--Nuestras INFO-->
+            <footer>
+                <div class="pieDePagina">
+                        <!--aca puede ir la iframe-->
+                    <div class="subPieDePagina"> Direccion: capital fedeal, calle... entre ... y ...</div>
+        
+                    <div class="subPieDePagina">
+                    <div style="width: 100%"><div style="width: 100%"><iframe width="500" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=es&amp;q=-34.593644,%20-58.362688+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe></div>
+                    </div></div>
+                    
+                    <div class="subPieDePagina">Numero de telefono:..... </div>
+        
+        
+                    <div class="subPieDePagina">Direccion mail: ...@gmail.com</div>
+        
+                    
+                    <div class="subPieDePagina">Nuestras redes:</div>
+        
+                    <div class="redes">
+                        <li class="subRedes">
+                            <a href="https://www.instagram.com/?hl=es-la" target="_blank" class="links">Instagram</a> 
+                        </li>
+                        <li class="subRedes">
+                            <a href="https://www.youtube.com/" target="_blank" class="links">Youtube</a> 
+                        </li>
+                        <li class="subRedes">
+                            <a href="https://twitter.com/?lang=es" target="_blank" class="links">Twitter</a> 
+                        </li>
+                        <li class="subRedes">
+                            <a href="https://es-la.facebook.com/" target="_blank" class="links">Facebook</a> 
+                        </li>
+                    </div> 
+            </footer>
+        
+            <!--link js-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            
+    </div>
+</body>
+</html>
