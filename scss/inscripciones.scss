@@ -16,8 +16,8 @@ body{
   
           grid-template-areas:"header"
                               "titulo"
-                              "inicio"
-                              "main" 
+                              "main"
+                              "carru"
                               "hipervinculos"
                               "footer ";
           header{
@@ -55,8 +55,8 @@ body{
                   }
               }
           }//fin encabezado//
-
-          /*lo que cambia entre hoja y hoja de htmls*/
+        
+        /*lo que cambia entre hoja y hoja de htmls*/
         .titulo {    
 
             grid-area: titulo;
@@ -79,40 +79,36 @@ body{
             }
         }
 
-        .inicio{
-            grid-area: inicio;
-            width: 300px;
-            margin: 0mm auto 1mm;
-        
-            background-color: aliceblue;
-            padding: 0px 5px;
-            font-size: 3.5mm;
-        }
+        main{
+            form{
+                /*todo lo que seria info en la pagina*/
+                .contenido{
 
-        /*todo lo que seria info en la pagina*/
-        .contenido{
+                    grid-area: main;
 
-            grid-area: main;
+                    height: 400px;
+                    width: 300px;
+                    overflow: auto;
 
-            height: 400px;
-            width: 300px;
-            overflow: auto;
+                    margin: 5mm;
+                    padding: 5mm 6mm;
 
-            margin: 0mm;
-            padding: 0;
+                    margin-left: auto;
+                    margin-right: auto;
 
-            margin-left: auto;
-            margin-right: auto;
+                    border: 3px solid black;
+                    background-color: rgb(233, 185, 96);
 
-            border: 3px solid black;
-            background-color: rgb(233, 185, 96);
+                    font-size: 12px;
+                    font-family:Arial, Helvetica, sans-serif;
+                    text-align: justify;
 
-            font-size: 12px;
-            font-family:Arial, Helvetica, sans-serif;
-            text-align: justify;
-            .materias{
-                padding: 5mm 3mm 0px;
+                    .opciones{
+                        padding: 7px 0mm;
 
+                        font-size: 12px;
+                    }
+                }
             }
         }
 
@@ -199,10 +195,9 @@ body{
                 }
             }
         }   
+    
     }
 }
-
-
 
 //media queries//
 /*para pantallas de tablets*/
@@ -215,12 +210,12 @@ body{
                 margin: 5px 4mm;
                 .color-encabezado{
                     .imagen{
-
+    
                         @include tamaño(120px, 100px);
                     }
                 
                     .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
-
+    
                         justify-content: space-around ;
                         .nav-item{
                             @include flexCentroCentro;
@@ -228,7 +223,7 @@ body{
                             border: map-get($map:$botonNav , $key: bordeNav);
                             background-color: map-get($map:$botonNav , $key: fondoNav);
                             border-radius: map-get($map:$botonNav , $key: radioNav);
-
+    
                             @include tamaño(120px, 80px);
                             text-align: center;
                         }
@@ -236,73 +231,68 @@ body{
                 }
             }//fin encabezado//
 
-            .titulo{
-                .subTitulo{
-                    @include tamaño(300px, 80px);
-                    font-size: 25px;
-                }
-            }
-
-
-            .inicio{
-                width: 600px;
-                margin: 0mm auto 1mm;
+        .titulo{
+            .subTitulo{
+                @include tamaño(300px, 80px);
             
-                font-size: 20px;
-            
-            }
-            
+                font-size: 25px;
         
-            /*todo lo que seria info en la pagina*/
-            .contenido{
+            }
+        }
 
-                height: 420px;
-                width: 600px;
+        main{
+            form{
+                /*todo lo que seria info en la pagina*/
+                .contenido{
+                    height: 420px;
+                    width: 600px;
 
-                margin-left: auto;
-                margin-right: auto;
-                padding: 2mm 7mm;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 2mm 7mm;
 
-                font-size: 17px;
-                .materias{
-                    padding: 5mm 2mm 0px; 
+                    .opciones{
+                        font-size: 17px;
+                    }
                 }
             }
-            
-            .hipervinculos{
-                font-size: 15px;
-            }
+        }
+        
+        
+        .hipervinculos{
+            font-size: 15px;
+        }
 
-            footer{
-                .pieDePagina{
-                    margin-top: 30px;
-                    font-size: $fontSizePromedioTablet - 2px;
+        footer{
+            .pieDePagina{
+                margin-top: 30px;
+                font-size: $fontSizePromedioTablet - 2px;
 
-                    .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
-                        iframe{
-                            @include tamaño(500px, 250px);
-                        }
+                .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
+                    iframe{
+                        @include tamaño(500px, 250px);
                     }
+                }
 
-                    .redes{//los links a redes sociales//
+                .redes{//los links a redes sociales//
 
-                        .subRedes{
+                    .subRedes{
 
-                            @include tamaño(150px, 70px);
-                                
-                            //los links a redes//
-                            .links{
-                                font-size: $fontSizePromedioTablet - 4px;
+                        @include tamaño(150px, 70px);
+                            
+                        //los links a redes//
+                        .links{
+                            font-size: $fontSizePromedioTablet - 4px;
 
-                            }
                         }
                     }
                 }
             }
         }
-    } 
+    }
+} 
 }/*fin de quering para tablets*/
- 
+     
 @media only screen and (min-width:1200px){ //media quering para monitores//
     body{
         .contenedor{
@@ -319,13 +309,13 @@ body{
                         .nav-item{
                             padding-left: 2mm;
                             margin: 4mm 5mm;
-
+    
                             @include tamaño(180px, 60px);
                         }
                     }
                 }
             }//fin encabezado//
-    
+     
             .titulo{ 
                 .subTitulo{
                     @include tamaño(350px, 90px);
@@ -334,23 +324,52 @@ body{
                 }
             }
 
-            .inicio{
-                width: 800px;
-                margin: 0mm auto 1mm;
-            
-                font-size: 23px;
+            main{
+                form{
+                    /*todo lo que seria info en la pagina*/
+                    .contenido{
+                        height: 470px;
+                        width: 800px;
+
+                        font-size: 17px; 
+                    }
+                }
             }
-        
-        
+
             /*todo lo que seria info en la pagina*/
             .contenido{
-                height: 470px;
-                width: 800px;
-        
+                @include tamaño(800px, 470px);
                 font-size: 17px;
-                .materias{
-                    padding: 5mm 3mm 0px;
-                } 
+            }
+
+            .carousel{
+                .carousel-inner{
+                    .carousel-item{
+                        /*las review*/
+                        .hoja1{
+                            @include tamaño(600px, 200px);
+
+                            margin-bottom: 1cm;
+                            font-size: 20px;
+                        }
+
+                        /*no me funciona la "," para que se repita un codigo en diferentes clases*/
+                        .hoja2{
+                            @include tamaño(600px, 200px);
+
+                            margin-bottom: 1cm;
+                            font-size: 20px;
+                        }
+
+                        /*no me funciona la "," para que se repita un codigo en diferentes clases*/
+                        .hoja3{
+                            @include tamaño(600px, 200px);
+
+                            margin-bottom: 1cm;
+                            font-size: 20px;
+                        }
+                    }
+                }
             }
 
             .hipervinculos{
@@ -370,14 +389,14 @@ body{
                                 @include tamaño(600px, 300px);
                             }
                         }   
-
+    
                     .redes{    //los links a redes sociales//
                         .subRedes{      //los contenedores de redes//
                             @include tamaño(4cm, 1.8cm);
                             
                             .links{     //los links a redes//
                                 font-size: 17px;
-
+    
                             }
                         }
                     }
@@ -386,9 +405,3 @@ body{
         }
     } 
 }/*fin de quering para computadoras*/
-
-
-        
-        
-    
-        
