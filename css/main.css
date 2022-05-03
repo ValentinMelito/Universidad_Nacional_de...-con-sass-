@@ -3,17 +3,11 @@
   padding: 0; }
 
 body {
-  background-image: linear-gradient(to right, #cedefb, #6699cc); }
+  background-image: url(../imagenes/fondo3.png); }
   body .contenedor {
     display: grid;
-    grid-template-areas: "header " "h1   " "h2     " "main  " "footer ";
-    /*todavia falta
-        .moverInicio{
-            position: sticky;
-            z-index: 1;
-            margin: 10cm;
-            background-color: aliceblue;
-        }*/
+    grid-template-areas: "header " "h1   " "h2     "   "main  " "flecha" "footer ";
+    /*flecha que manda para arriba*/
     /*Pie de pagina*/ }
     body .contenedor header {
       position: sticky;
@@ -41,12 +35,25 @@ body {
       grid-area: h1;
       text-align: center;
       font-family: 'Times New Roman', Times, serif;
-      font-size: 23px; }
+      font-size: 23px;
+      margin-top: 5px;
+      background-color: #d4eafc;
+      display: inline;
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-left: auto;
+      margin-right: auto; }
     body .contenedor h2 {
       grid-area: h2;
       text-align: center;
       font-family: 'Times New Roman', Times, serif;
-      font-size: 16px; }
+      font-size: 18px;
+      background-color: aliceblue;
+      display: inline;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: auto;
+      margin-right: auto; }
     body .contenedor main {
       grid-area: main;
       margin-bottom: 10px;
@@ -64,8 +71,22 @@ body {
         background-color: #ddddfa;
         border: 3px dashed black;
         font-size: 12px; }
+    body .contenedor .moverInicio {
+      grid-area: flecha; }
+      body .contenedor .moverInicio .flecha {
+        width: 45px;
+        height: 45px;
+        border-radius: 50px;
+        border: 3px ridge black;
+        position: fixed;
+        z-index: 1;
+        top: 85%;
+        margin-left: 87%;
+        margin-right: 5px;
+        padding: 0px; }
     body .contenedor footer {
-      grid-area: footer; }
+      grid-area: footer;
+      margin-top: 10px; }
       body .contenedor footer .pieDePagina {
         display: flex;
         flex-flow: column nowrap;
@@ -116,7 +137,11 @@ body {
     body .contenedor header .color-encabezado .palabrasEncabezado {
       justify-content: space-around; }
       body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
-        padding: 0mm 3mm;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 1mm 3mm;
         border: 2px solid black;
         background-color: white;
         border-radius: 30px;
@@ -136,9 +161,16 @@ body {
       margin: 16px 30px;
       padding: 10px;
       font-size: 20px; }
+  body .contenedor .moverInicio .flecha {
+    width: 60px;
+    height: 60px;
+    border: 2px ridge black;
+    top: 88%;
+    margin-left: 87%;
+    margin-right: 5px; }
   body .contenedor footer .pieDePagina {
     margin-top: 30px;
-    font-size: 8px; }
+    font-size: 18px; }
     body .contenedor footer .pieDePagina .subPieDePagina iframe {
       width: 500px;
       height: 250px; }
@@ -157,21 +189,25 @@ body {
       width: 170px;
       height: 150px; }
     body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
-      text-align: center;
       padding-left: 2mm;
       margin: 4mm 5mm;
-      width: 170px;
-      height: 50px; }
+      width: 180px;
+      height: 60px; }
   body .contenedor h1 {
+    background-color: aliceblue;
+    display: inline;
     font-size: 1cm;
-    padding: 0px; }
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto; }
   body .contenedor h2 {
     display: inline;
     width: 15cm;
     margin: 5mm auto 1mm;
     font-size: 0.75cm; }
   body .contenedor .fondoMain {
-    background-image: url(../imagenes/universidad.jpg);
+    background-repeat: repeat;
     margin: 0cm 1cm;
     padding: 1mm 0mm 1mm; }
     body .contenedor .fondoMain main {
@@ -182,6 +218,8 @@ body {
       body .contenedor .fondoMain main .noticia {
         margin: 1cm;
         padding: 7mm; }
+  body .contenedor .moverInicio .flecha {
+    display: none; }
   body .contenedor footer {
     margin-top: 1cm; }
     body .contenedor footer .pieDePagina {

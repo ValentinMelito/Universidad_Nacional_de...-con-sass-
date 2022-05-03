@@ -1,544 +1,301 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {
+  margin: 0;
+  padding: 0; }
 
-/* color de fondo*/
-body{
-
-    background-image: linear-gradient(to right, rgb(206, 222, 251), rgb(102, 153, 204));
-
-}
-
-/*para cambiar las medidas de la foto*/
-.imagen{
-    margin-left: 5mm;
-    height: 90px;
-    width: 90px;
-
-}
-
-.color-encabezado{
-    border: 3px solid black;
-    border-radius: 50px;
-    background-color: rgb(102, 102, 153);
-}
-
-/*pongo  en blanco el boton que se desliza*/
-.navbar-toggler{
-    background-color: white;
-}
-
-
-.nav-item{
-
-    padding-left: 2mm;
-    margin: 4mm 2mm;
-    background-color: white;
-    
-}
-
-/*son los hipervinculos del encabezado, que se ponen contra la izquierda cuando esta en pantalla del celu*/
-.palabrasEncabezado{
-    
-    justify-content: start;
-}
-
-.carusel{
-    grid-area: carru;
-}
-
-header{
-    grid-area: header;
-    /*usamos el flex para que se ponga el "logo" (temporal) y el linkeo de paginas en la misma linea*/
-
-    margin: 2mm 5mm 2mm;
-    
-    /*para que este sobre toda la pagina*/
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    
-}
-
-
-.contenedor{
-
+body {
+  background-image: url(../imagenes/fondo3.png); }
+  body .contenedor {
     display: grid;
-
-    grid-template-areas: "header"
-                         "titulo"
-                         "main"
-                         "carru"
-                         "hipervinculos"
-                         "footer ";
-}
-
-
-/*lo que cambia entre hoja y hoja de htmls*/
-.titulo {    
-
-    grid-area: titulo;
-    margin: 3mm 0mm 1mm;
-
-    /*para que la caja se ponnga en el centro*/
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-}
-.subTitulo{
-    
-    /*para que el titulo se centr2*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 50px;
-    width: 220px;
-
-    padding:0mm;
-    border: 3px dashed black;
-    background-color: yellowgreen;
-    font-size: 5mm;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-
-/*todo lo que seria info en la pagina*/
-.contenido{
-
-    grid-area: main;
-
-    height: 400px;
-    width: 300px;
-    overflow: auto;
-
-    margin: 5mm;
-    padding: 5mm;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    border: 3px solid black;
-    background-color: rgb(233, 185, 96);
-
-    font-size: 12px;
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: justify;
-}
-
-
-/*las review*/
-.hoja1{
-    /*le hago flex para que el texto quede centrado en el recuadro*/
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-
-    width: 400px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-
-    border: 2px solid black;
-    background-color: white;
-
-    margin-bottom: 1cm;
-    font-size: 14px;
-}
-
-/*no me funciona la "," para que se repita un codigo en diferentes clases*/
-.hoja2{
-    
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-
-    width: 400px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-
-    border: 2px solid black;
-    background-color: white;
-
-    margin-bottom: 1cm;
-    font-size: 14px;
-}
-
-/*no me funciona la "," para que se repita un codigo en diferentes clases*/
-.hoja3{
-    
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-
-    width: 400px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-
-    border: 2px solid black;
-    background-color: white;
-
-    margin-bottom: 1cm;
-    font-size: 14px;
-}
-
-
-/*redireccion a otras hojas del html*/
-.hipervinculos{
-
-    grid-area: hipervinculos;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    margin: 1cm 5mm 5mm;
-
-
-    font-size: 12px;
-    font-family:Arial, Helvetica, sans-serif;
-
-}
-.hijos{
-    text-align: center;
-    width: auto;
-    padding: 5px;
-    background-color: yellowgreen;
-
-}
-
-
-
-/*Pie de pagina*/
-footer{
-    grid-area: footer;
-}
-
-/*lo que no es redes*/
-.pieDePagina{
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 12px;
-
-    border-top: 3px solid rgb(51, 51, 0);
-    background-color: rgb(177, 129, 221);
-}
-/*los datos sobre ubicacion y numeros (todo menos redes)*/
-.subPieDePagina{
-    padding: 5px;
-}
-
-/*los links a redes sociales*/
-.redes{
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    
-
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-/*los contenedores de fotos*/
-.subRedes{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-    width: 2cm;
-    height: 1cm;
-
-    margin: 0px 10px 10px;    
-
-    background-color: rgb(213, 227, 255);
-    border: 5px ridge rgb(186, 253, 255);
-
-    font-size: 13px;
-}
-
-/*para que se agranden los cuadros de redes*/
-.subRedes:hover{
-    transform:scale(1.19);
-    transition: 1.5s;
-}
-    
-/*los links a redes*/
-.links{
-    text-decoration: none;
-    list-style: none;
-    color: black;
-    font-size: 11px;
-
-}
-
-iframe{
-    height: 150px;
-    width: 300px;
-}
-
+    grid-template-areas: "header" "titulo" "main" "carru" "hipervinculos" "footer ";
+    /*lo que cambia entre hoja y hoja de htmls*/
+    /*todo lo que seria info en la pagina*/
+    /*redireccion a otras hojas del html*/
+    /*Pie de pagina*/ }
+    body .contenedor header {
+      position: sticky;
+      z-index: 2;
+      top: 1mm;
+      grid-area: header;
+      margin: 5px 7mm; }
+      body .contenedor header .color-encabezado {
+        border: 3px solid black;
+        border-radius: 50px;
+        background-color: #666699; }
+        body .contenedor header .color-encabezado .imagen {
+          margin-left: 5mm;
+          width: 90px;
+          height: 90px; }
+        body .contenedor header .color-encabezado .navbar-toggler {
+          background-color: white; }
+        body .contenedor header .color-encabezado .palabrasEncabezado {
+          justify-content: start; }
+          body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+            padding-left: 2mm;
+            margin: 4mm 2mm;
+            background-color: white; }
+    body .contenedor .titulo {
+      grid-area: titulo;
+      margin: 3mm 0mm 1mm;
+      /*para que la caja se ponnga en el centro*/
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center; }
+      body .contenedor .titulo .subTitulo {
+        /*para que el titulo se centre*/
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 50px;
+        padding: 0mm;
+        border: 3px dashed black;
+        background-color: yellowgreen;
+        font-size: 5mm;
+        font-family: Arial, Helvetica, sans-serif; }
+    body .contenedor .contenido {
+      grid-area: main;
+      width: 300px;
+      height: 400px;
+      overflow: auto;
+      margin: 5mm;
+      padding: 5mm;
+      margin-left: auto;
+      margin-right: auto;
+      border: 3px solid black;
+      background-color: #e9b960;
+      font-size: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: justify; }
+    body .contenedor .carousel {
+      grid-area: carru; }
+      body .contenedor .carousel .carousel-inner .carousel-item {
+        /*las review*/
+        /*no me funciona la "," para que se repita un codigo en diferentes clases*/
+        /*no me funciona la "," para que se repita un codigo en diferentes clases*/ }
+        body .contenedor .carousel .carousel-inner .carousel-item .hoja1 {
+          /*le hago flex para que el texto quede centrado en el recuadro*/
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-items: center;
+          width: 200px;
+          height: 100px;
+          margin-left: auto;
+          margin-right: auto;
+          border: 2px solid black;
+          background-color: white;
+          margin-bottom: 1cm;
+          font-size: 14px; }
+        body .contenedor .carousel .carousel-inner .carousel-item .hoja2 {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-items: center;
+          width: 200px;
+          height: 100px;
+          margin-left: auto;
+          margin-right: auto;
+          border: 2px solid black;
+          background-color: white;
+          margin-bottom: 1cm;
+          font-size: 14px; }
+        body .contenedor .carousel .carousel-inner .carousel-item .hoja3 {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-items: center;
+          width: 200px;
+          height: 100px;
+          margin-left: auto;
+          margin-right: auto;
+          border: 2px solid black;
+          background-color: white;
+          margin-bottom: 1cm;
+          font-size: 14px; }
+    body .contenedor .hipervinculos {
+      grid-area: hipervinculos;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      margin: 1cm 5mm 5mm;
+      font-size: 12px;
+      font-family: Arial, Helvetica, sans-serif; }
+      body .contenedor .hipervinculos .hijos {
+        text-align: center;
+        width: auto;
+        padding: 5px;
+        background-color: yellowgreen; }
+    body .contenedor footer {
+      grid-area: footer;
+      margin-top: 10px; }
+      body .contenedor footer .pieDePagina {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 12px;
+        border-top: 3px solid #333300;
+        background-color: #b181dd; }
+        body .contenedor footer .pieDePagina .subPieDePagina {
+          padding: 5px; }
+          body .contenedor footer .pieDePagina .subPieDePagina iframe {
+            width: 300px;
+            height: 150px; }
+        body .contenedor footer .pieDePagina .redes {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-items: center;
+          margin-left: auto;
+          margin-right: auto; }
+          body .contenedor footer .pieDePagina .redes .subRedes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2cm;
+            height: 1cm;
+            margin: 0px 10px 10px;
+            background-color: #d5e3ff;
+            border: 5px ridge #bafdff;
+            font-size: 13px; }
+            body .contenedor footer .pieDePagina .redes .subRedes:hover {
+              transform: scale(1.19);
+              transition: 1.5s; }
+            body .contenedor footer .pieDePagina .redes .subRedes .links {
+              text-decoration: none;
+              list-style: none;
+              color: black;
+              font-size: 12px -1px; }
 
 /*para pantallas de tablets*/
-@media only screen and (min-width:650px){
-
-    
-
-    .imagen{
-
-        height: 100px;
+@media only screen and (min-width: 650px) {
+  body .contenedor {
+    /*todo lo que seria info en la pagina*/ }
+    body .contenedor header {
+      top: 10px;
+      margin: 5px 4mm; }
+      body .contenedor header .color-encabezado .imagen {
         width: 120px;
-    
-    }
-
-    header{
-        top: 10px;
-        margin: 5px 4mm;
-
-    }
-
-    
-    .nav-item{
-
-        padding: 0mm 3mm;
-        border: 2px solid black;
-        background-color: white;
-        border-radius: 30px;
-
-        height: 80px;
-        width: 120px ;
-        text-align: center;
-
-    }
-
-    /*son los hipervinculos del encabezado, que se ponen espaciados*/
-    .palabrasEncabezado{
-
-       justify-content: space-around ; 
-    }
-
-    .subTitulo{
-      
-        height: 80px;
-        width: 300px;
-    
-
-        font-size: 25px;
-
-    }
-
-    /*todo lo que seria info en la pagina*/
-    .contenido{
-
-        height: 420px;
-        width: 600px;
-
-        margin-left: auto;
-        margin-right: auto;
-        padding: 2mm 7mm;
-
-        font-size: 17px;
-        
-    }
-
-
-    /*las review*/
-    .hoja1{
-
+        height: 100px; }
+      body .contenedor header .color-encabezado .palabrasEncabezado {
+        justify-content: space-around; }
+        body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-items: center;
+          padding: 1mm 3mm;
+          border: 2px solid black;
+          background-color: white;
+          border-radius: 30px;
+          width: 120px;
+          height: 80px;
+          text-align: center; }
+    body .contenedor .titulo .subTitulo {
+      width: 300px;
+      height: 80px;
+      font-size: 25px; }
+    body .contenedor .contenido {
+      width: 600px;
+      height: 420px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2mm 7mm;
+      font-size: 17px; }
+    body .contenedor .carousel .carousel-inner .carousel-item {
+      /*las review*/
+      /*no me funciona la "," para que se repita un codigo en diferentes clases*/
+      /*no me funciona la "," para que se repita un codigo en diferentes clases*/ }
+      body .contenedor .carousel .carousel-inner .carousel-item .hoja1 {
         width: 500px;
         height: 200px;
-
         margin-bottom: 1cm;
-        font-size: 17px;
-    }
-
-    /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-    .hoja2{
-
+        font-size: 17px; }
+      body .contenedor .carousel .carousel-inner .carousel-item .hoja2 {
         width: 500px;
         height: 200px;
-
         margin-bottom: 1cm;
-        font-size: 17px;
-    }
-
-    /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-    .hoja3{
-
+        font-size: 17px; }
+      body .contenedor .carousel .carousel-inner .carousel-item .hoja3 {
         width: 500px;
         height: 200px;
-
         margin-bottom: 1cm;
-        font-size: 17px;
-    }
-
-    .hipervinculos{
-
-        font-size: 15px;
-
-    }
-
-    .pieDePagina{
-        margin-top: 30px;
-        font-size: 18px;
-    }   
-
-    .subRedes{
+        font-size: 17px; }
+    body .contenedor .hipervinculos {
+      font-size: 15px; }
+    body .contenedor footer .pieDePagina {
+      margin-top: 30px;
+      font-size: 18px; }
+      body .contenedor footer .pieDePagina .subPieDePagina iframe {
+        width: 500px;
+        height: 250px; }
+      body .contenedor footer .pieDePagina .redes .subRedes {
         width: 150px;
-        height: 70px;
-    }
+        height: 70px; }
+        body .contenedor footer .pieDePagina .redes .subRedes .links {
+          font-size: 16px; } }
 
-    .links{
-        font-size: 16px;
-    
-    }
-
-    iframe{
-        height: 250px;
-        width: 500px;
-    }
-    
-}/*fin de quering para tablets*/
-
-/*media quering para monitores*/
-@media only screen and (min-width:1200px){
-
-
-    header{
-        margin: 2mm 1cm;
-        
-        /*para que este sobre toda la pagina*/
-        position: sticky;
-        z-index: 2;
-        top: 5px;
-    
-    }
-  
-
-    .imagen{
-
-        height: 150px;
+/*fin de quering para tablets*/
+@media only screen and (min-width: 1200px) {
+  body .contenedor {
+    /*todo lo que seria info en la pagina*/ }
+    body .contenedor header {
+      margin: 2mm 1cm;
+      top: 5px; }
+      body .contenedor header .color-encabezado .imagen {
         width: 170px;
-    
-    }
-
-    .nav-item{
-
-        text-align: center;
+        height: 150px; }
+      body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
         padding-left: 2mm;
         margin: 4mm 5mm;
-        height: 50px;
-        width: 170px ;
-    }
-
-    .subTitulo{
-
-        height: 90px;
-        width: 350px;
-
-        font-size: 30px;
-
-    }
-
-    /*todo lo que seria info en la pagina*/
-    .contenido{
-
-        grid-area: main;
-
-        height: 470px;
-        width: 800px;
-
-        font-size: 17px;
-        
-    }
-
-    /*las review*/
-    .hoja1{
-
+        width: 180px;
+        height: 60px; }
+    body .contenedor .titulo .subTitulo {
+      width: 350px;
+      height: 90px;
+      font-size: 30px; }
+    body .contenedor .contenido {
+      width: 800px;
+      height: 470px;
+      font-size: 17px; }
+    body .contenedor .carousel .carousel-inner .carousel-item {
+      /*las review*/
+      /*no me funciona la "," para que se repita un codigo en diferentes clases*/
+      /*no me funciona la "," para que se repita un codigo en diferentes clases*/ }
+      body .contenedor .carousel .carousel-inner .carousel-item .hoja1 {
         width: 600px;
         height: 200px;
-
         margin-bottom: 1cm;
-        font-size: 20px;
-    }
-
-    /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-    .hoja2{
-
+        font-size: 20px; }
+      body .contenedor .carousel .carousel-inner .carousel-item .hoja2 {
         width: 600px;
         height: 200px;
-
         margin-bottom: 1cm;
-        font-size: 20px;
-    }
-
-    /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-    .hoja3{
-
+        font-size: 20px; }
+      body .contenedor .carousel .carousel-inner .carousel-item .hoja3 {
         width: 600px;
         height: 200px;
-
         margin-bottom: 1cm;
-        font-size: 20px;
-    }
-
-    .hipervinculos{
-
-        font-size: 17px;
-        margin-bottom: 3mm;
-
-    }
-
-    footer{
-        margin-top: 5mm;
-
-    }
-    
-    /*lo que no es redes*/
-    .pieDePagina{
-    
+        font-size: 20px; }
+    body .contenedor .hipervinculos {
+      font-size: 17px;
+      margin-bottom: 3mm; }
+    body .contenedor footer {
+      margin-top: 1cm; }
+      body .contenedor footer .pieDePagina {
         font-size: 4.5mm;
-    
-        padding-top: 2mm;
-    }
+        padding-top: 2mm; }
+        body .contenedor footer .pieDePagina .subPieDePagina {
+          padding: 1.3mm; }
+          body .contenedor footer .pieDePagina .subPieDePagina iframe {
+            width: 600px;
+            height: 300px; }
+        body .contenedor footer .pieDePagina .redes .subRedes {
+          width: 4cm;
+          height: 1.8cm; }
+          body .contenedor footer .pieDePagina .redes .subRedes .links {
+            font-size: 17px; } }
 
-    /*los datos sobre ubicacion y numeros (todo menos redes)*/
-    .subPieDePagina{
-        padding: 1.3mm;
-    }
-    
-
-    
-
-    /*los contenedores de fotos*/
-    .subRedes{
-        width: 4cm;
-        height: 1.8cm;
-
-    }
-
-    .links{
-        font-size: 17px;
-    
-    }
-
-    iframe{
-        height: 300px;
-        width: 600px;
-    }
-
-}
+/*fin de quering para computadoras*/
