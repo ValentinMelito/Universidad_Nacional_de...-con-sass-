@@ -132,8 +132,8 @@ body {
     top: 10px;
     margin: 5px 4mm; }
     body .contenedor header .color-encabezado .imagen {
-      width: 120px;
-      height: 100px; }
+      width: 150px;
+      height: 120px; }
     body .contenedor header .color-encabezado .palabrasEncabezado {
       justify-content: space-around; }
       body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
@@ -187,7 +187,7 @@ body {
     top: 5px; }
     body .contenedor header .color-encabezado .imagen {
       width: 170px;
-      height: 150px; }
+      height: 170px; }
     body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
       padding-left: 2mm;
       margin: 4mm 5mm;
@@ -236,4 +236,4 @@ body {
         body .contenedor footer .pieDePagina .redes .subRedes .links {
           font-size: 17px; } }
 
-/*fin de quering para tablets*/
+/*fin de quering para computadoras*/

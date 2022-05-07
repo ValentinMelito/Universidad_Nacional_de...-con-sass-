@@ -11,66 +11,70 @@
 
 body{
     background-image: url(../imagenes/fondo3.png);
-      .contenedor{
-          display: grid;
+    .contenedor{
+        display: grid;
   
           grid-template-areas:"header"
                               "titulo"
                               "main"
-                              "carru"
                               "hipervinculos"
                               "footer ";
-          header{
-              //para que este sobre toda la pagina//
-              position: sticky;
-              z-index: 2;
-              top: 1mm;
-              grid-area: header;
-              margin: 5px 7mm;
+        header{
+            //para que este sobre toda la pagina//
+            position: sticky;
+            z-index: 2;
+            top: 1mm;
+            grid-area: header;
+            margin: 5px 7mm;
               
-              .color-encabezado{
-                  border: 3px solid black;
-                  border-radius: 50px;
-                  background-color: rgb(102, 102, 153);
-  
-                  .imagen{
-                      margin-left: 5mm;
-                      @include tamaño(90px, 90px);
+          .color-encabezado{
+            border: 3px solid black;
+            border-radius: 50px;
+            background-color: rgb(102, 102, 153);
+            .imagen{
+                margin-left: 5mm;
+                @include tamaño(90px, 90px);
                       
-                  }
+                }
                   
-                  //pongo  en blanco el boton que se desliza//
-                  .navbar-toggler{
-                      background-color: white;
-                  }
-                  //son los hipervinculos del encabezado, que se ponen contra la izquierda cuando esta en pantalla del celu//
-                  .palabrasEncabezado{  
-                      justify-content: start;
+                //pongo  en blanco el boton que se desliza//
+                .navbar-toggler{
+                    background-color: white;
+                }
+
+                //son los hipervinculos del encabezado, que se ponen contra la izquierda cuando esta en pantalla del celu//
+                .palabrasEncabezado{  
+                    justify-content: start;
           
-                      .nav-item{
-                          padding-left: 2mm;
-                          margin: 4mm 2mm;
-                          background-color: white; 
-                      }
-                  }
-              }
-          }//fin encabezado//
-        
-        /*lo que cambia entre hoja y hoja de htmls*/
+                    .nav-item{
+                        padding-left: 2mm;
+                        margin: 4mm 2mm;
+                        background-color: white; 
+                    }
+                }
+            }
+        }//fin encabezado//
+
         .titulo {    
 
             grid-area: titulo;
             margin: 3mm 0mm 1mm;
-
+        
             /*para que la caja se ponnga en el centro*/
-            @include flexCentroCentro;
-            
+            display: flex;
+        
+            align-items: center;
+            justify-content: center;
             .subTitulo{
-                /*para que el titulo se centre*/
-                @include flexCentroCentro;
-
-                @include tamaño(220px, 50px);
-
+                
+                /*para que el titulo se centr2*/
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+                height: 50px;
+                width: 220px;
+            
                 padding:0mm;
                 border: 3px dashed black;
                 background-color: yellowgreen;
@@ -81,9 +85,7 @@ body{
 
         main{
             form{
-                /*todo lo que seria info en la pagina*/
                 .contenido{
-
                     grid-area: main;
 
                     height: 400px;
@@ -105,14 +107,12 @@ body{
 
                     .opciones{
                         padding: 7px 0mm;
-
+                    
                         font-size: 12px;
                     }
                 }
             }
         }
-
-
         /*redireccion a otras hojas del html*/
         .hipervinculos{
 
@@ -195,9 +195,13 @@ body{
                 }
             }
         }   
-    
     }
 }
+
+
+
+
+
 
 //media queries//
 /*para pantallas de tablets*/
@@ -210,12 +214,12 @@ body{
                 margin: 5px 4mm;
                 .color-encabezado{
                     .imagen{
-    
+
                         @include tamaño(120px, 100px);
                     }
                 
                     .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
-    
+
                         justify-content: space-around ;
                         .nav-item{
                             @include flexCentroCentro;
@@ -223,7 +227,7 @@ body{
                             border: map-get($map:$botonNav , $key: bordeNav);
                             background-color: map-get($map:$botonNav , $key: fondoNav);
                             border-radius: map-get($map:$botonNav , $key: radioNav);
-    
+
                             @include tamaño(120px, 80px);
                             text-align: center;
                         }
@@ -231,171 +235,55 @@ body{
                 }
             }//fin encabezado//
 
-        .titulo{
-            .subTitulo{
-                @include tamaño(300px, 80px);
-            
-                font-size: 25px;
-        
-            }
-        }
-
-        main{
-            form{
-                /*todo lo que seria info en la pagina*/
-                .contenido{
-                    height: 420px;
-                    width: 600px;
-
-                    margin-left: auto;
-                    margin-right: auto;
-                    padding: 2mm 7mm;
-
-                    .opciones{
-                        font-size: 17px;
-                    }
-                }
-            }
-        }
-        
-        
-        .hipervinculos{
-            font-size: 15px;
-        }
-
-        footer{
-            .pieDePagina{
-                margin-top: 30px;
-                font-size: $fontSizePromedioTablet - 2px;
-
-                .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
-                    iframe{
-                        @include tamaño(500px, 250px);
-                    }
-                }
-
-                .redes{//los links a redes sociales//
-
-                    .subRedes{
-
-                        @include tamaño(150px, 70px);
-                            
-                        //los links a redes//
-                        .links{
-                            font-size: $fontSizePromedioTablet - 4px;
-
-                        }
-                    }
-                }
-            }
-        }
-    }
-} 
-}/*fin de quering para tablets*/
-     
-@media only screen and (min-width:1200px){ //media quering para monitores//
-    body{
-        .contenedor{
-            header{
-                margin: 2mm 1cm;
-                
-                top: 5px;
-                .color-encabezado{
-                    .imagen{
-                        @include tamaño(170px, 150px);
-                    }
-                
-                    .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
-                        .nav-item{
-                            padding-left: 2mm;
-                            margin: 4mm 5mm;
-    
-                            @include tamaño(180px, 60px);
-                        }
-                    }
-                }
-            }//fin encabezado//
-     
-            .titulo{ 
+            .titulo{
                 .subTitulo{
-                    @include tamaño(350px, 90px);
-                    font-size: 30px;
+                    @include tamaño(300px, 80px);
+                
+                    font-size: 25px;
             
                 }
             }
 
             main{
                 form{
-                    /*todo lo que seria info en la pagina*/
                     .contenido{
-                        height: 470px;
-                        width: 800px;
+                        height: 420px;
+                        width: 600px;
 
-                        font-size: 17px; 
-                    }
-                }
-            }
-
-            /*todo lo que seria info en la pagina*/
-            .contenido{
-                @include tamaño(800px, 470px);
-                font-size: 17px;
-            }
-
-            .carousel{
-                .carousel-inner{
-                    .carousel-item{
-                        /*las review*/
-                        .hoja1{
-                            @include tamaño(600px, 200px);
-
-                            margin-bottom: 1cm;
-                            font-size: 20px;
-                        }
-
-                        /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-                        .hoja2{
-                            @include tamaño(600px, 200px);
-
-                            margin-bottom: 1cm;
-                            font-size: 20px;
-                        }
-
-                        /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-                        .hoja3{
-                            @include tamaño(600px, 200px);
-
-                            margin-bottom: 1cm;
-                            font-size: 20px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding: 2mm 7mm;
+                        .opciones{
+                            font-size: 17px;
                         }
                     }
                 }
             }
 
             .hipervinculos{
-                font-size: 17px;
-                margin-bottom: 3mm;
+                font-size: 15px;
             }
-            footer{
-                margin-top: 1cm;
-                .pieDePagina{   //lo que no es redes//
-        
-                        font-size: 4.5mm;
-                    
-                        padding-top: 2mm;
-                        .subPieDePagina{    //los datos sobre ubicacion y numeros (todo menos redes)//
-                            padding: 1.3mm;
-                            iframe{
-                                @include tamaño(600px, 300px);
-                            }
-                        }   
     
-                    .redes{    //los links a redes sociales//
-                        .subRedes{      //los contenedores de redes//
-                            @include tamaño(4cm, 1.8cm);
-                            
-                            .links{     //los links a redes//
-                                font-size: 17px;
+            footer{
+                .pieDePagina{
+                    margin-top: 30px;
+                    font-size: $fontSizePromedioTablet - 2px;
+    
+                    .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
+                        iframe{
+                            @include tamaño(500px, 250px);
+                        }
+                    }
+    
+                    .redes{//los links a redes sociales//
+    
+                        .subRedes{
+    
+                            @include tamaño(150px, 70px);
+                                
+                            //los links a redes//
+                            .links{
+                                font-size: $fontSizePromedioTablet - 4px;
     
                             }
                         }
@@ -404,4 +292,83 @@ body{
             }
         }
     } 
-}/*fin de quering para computadoras*/
+    }/*fin de quering para tablets*/
+         
+    @media only screen and (min-width:1200px){ //media quering para monitores//
+        body{
+            .contenedor{
+                header{
+                    margin: 2mm 1cm;
+                    
+                    top: 5px;
+                    .color-encabezado{
+                        .imagen{
+                            @include tamaño(170px, 150px);
+                        }
+                    
+                        .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
+                            .nav-item{
+                                padding-left: 2mm;
+                                margin: 4mm 5mm;
+        
+                                @include tamaño(180px, 60px);
+                            }
+                        }
+                    }
+                }//fin encabezado//
+         
+                .titulo{ 
+                    .subTitulo{
+                        @include tamaño(350px, 90px);
+                        font-size: 30px;
+                
+                    }
+                }
+
+                main{
+                    form{
+                        .contenido{
+                            height: 470px;
+                            width: 800px;
+
+                            font-size: 17px;
+                        }
+                    }
+                }
+
+                .hipervinculos{
+                    font-size: 17px;
+                    margin-bottom: 3mm;
+                }
+                footer{
+                    margin-top: 1cm;
+                    .pieDePagina{   //lo que no es redes//
+            
+                            font-size: 4.5mm;
+                        
+                            padding-top: 2mm;
+                            .subPieDePagina{    //los datos sobre ubicacion y numeros (todo menos redes)//
+                                padding: 1.3mm;
+                                iframe{
+                                    @include tamaño(600px, 300px);
+                                }
+                            }   
+        
+                        .redes{    //los links a redes sociales//
+                            .subRedes{      //los contenedores de redes//
+                                @include tamaño(4cm, 1.8cm);
+                                
+                                .links{     //los links a redes//
+                                    font-size: 17px;
+        
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }/*fin de quering para computadoras*/
+
+
+                    

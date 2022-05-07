@@ -6,8 +6,7 @@ body {
   background-image: url(../imagenes/fondo3.png); }
   body .contenedor {
     display: grid;
-    grid-template-areas: "header" "titulo" "main" "carru" "hipervinculos" "footer ";
-    /*lo que cambia entre hoja y hoja de htmls*/
+    grid-template-areas: "header" "titulo" "main" "hipervinculos" "footer ";
     /*redireccion a otras hojas del html*/
     /*Pie de pagina*/ }
     body .contenedor header {
@@ -37,41 +36,37 @@ body {
       margin: 3mm 0mm 1mm;
       /*para que la caja se ponnga en el centro*/
       display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: center; }
+      align-items: center;
+      justify-content: center; }
       body .contenedor .titulo .subTitulo {
-        /*para que el titulo se centre*/
+        /*para que el titulo se centr2*/
         display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
         align-items: center;
-        width: 220px;
+        justify-content: center;
         height: 50px;
+        width: 220px;
         padding: 0mm;
         border: 3px dashed black;
         background-color: yellowgreen;
         font-size: 5mm;
         font-family: Arial, Helvetica, sans-serif; }
-    body .contenedor main form {
-      /*todo lo que seria info en la pagina*/ }
-      body .contenedor main form .contenido {
-        grid-area: main;
-        height: 400px;
-        width: 300px;
-        overflow: auto;
-        margin: 5mm;
-        padding: 5mm 6mm;
-        margin-left: auto;
-        margin-right: auto;
-        border: 3px solid black;
-        background-color: #e9b960;
-        font-size: 12px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: justify; }
-        body .contenedor main form .contenido .opciones {
-          padding: 7px 0mm;
-          font-size: 12px; }
+    body .contenedor main form .contenido {
+      grid-area: main;
+      height: 400px;
+      width: 300px;
+      overflow: auto;
+      margin: 5mm;
+      padding: 5mm 6mm;
+      margin-left: auto;
+      margin-right: auto;
+      border: 3px solid black;
+      background-color: #e9b960;
+      font-size: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: justify; }
+      body .contenedor main form .contenido .opciones {
+        padding: 7px 0mm;
+        font-size: 12px; }
     body .contenedor .hipervinculos {
       grid-area: hipervinculos;
       display: flex;
@@ -153,16 +148,14 @@ body {
     width: 300px;
     height: 80px;
     font-size: 25px; }
-  body .contenedor main form {
-    /*todo lo que seria info en la pagina*/ }
-    body .contenedor main form .contenido {
-      height: 420px;
-      width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 2mm 7mm; }
-      body .contenedor main form .contenido .opciones {
-        font-size: 17px; }
+  body .contenedor main form .contenido {
+    height: 420px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2mm 7mm; }
+    body .contenedor main form .contenido .opciones {
+      font-size: 17px; }
   body .contenedor .hipervinculos {
     font-size: 15px; }
   body .contenedor footer .pieDePagina {
@@ -179,69 +172,42 @@ body {
 
 /*fin de quering para tablets*/
 @media only screen and (min-width: 1200px) {
-  body .contenedor {
-    /*todo lo que seria info en la pagina*/ }
-    body .contenedor header {
-      margin: 2mm 1cm;
-      top: 5px; }
-      body .contenedor header .color-encabezado .imagen {
-        width: 170px;
-        height: 150px; }
-      body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
-        padding-left: 2mm;
-        margin: 4mm 5mm;
-        width: 180px;
-        height: 60px; }
-    body .contenedor .titulo .subTitulo {
-      width: 350px;
-      height: 90px;
-      font-size: 30px; }
-    body .contenedor main form {
-      /*todo lo que seria info en la pagina*/ }
-      body .contenedor main form .contenido {
-        height: 470px;
-        width: 800px;
-        font-size: 17px; }
-    body .contenedor .contenido {
-      width: 800px;
-      height: 470px;
-      font-size: 17px; }
-    body .contenedor .carousel .carousel-inner .carousel-item {
-      /*las review*/
-      /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-      /*no me funciona la "," para que se repita un codigo en diferentes clases*/ }
-      body .contenedor .carousel .carousel-inner .carousel-item .hoja1 {
-        width: 600px;
-        height: 200px;
-        margin-bottom: 1cm;
-        font-size: 20px; }
-      body .contenedor .carousel .carousel-inner .carousel-item .hoja2 {
-        width: 600px;
-        height: 200px;
-        margin-bottom: 1cm;
-        font-size: 20px; }
-      body .contenedor .carousel .carousel-inner .carousel-item .hoja3 {
-        width: 600px;
-        height: 200px;
-        margin-bottom: 1cm;
-        font-size: 20px; }
-    body .contenedor .hipervinculos {
-      font-size: 17px;
-      margin-bottom: 3mm; }
-    body .contenedor footer {
-      margin-top: 1cm; }
-      body .contenedor footer .pieDePagina {
-        font-size: 4.5mm;
-        padding-top: 2mm; }
-        body .contenedor footer .pieDePagina .subPieDePagina {
-          padding: 1.3mm; }
-          body .contenedor footer .pieDePagina .subPieDePagina iframe {
-            width: 600px;
-            height: 300px; }
-        body .contenedor footer .pieDePagina .redes .subRedes {
-          width: 4cm;
-          height: 1.8cm; }
-          body .contenedor footer .pieDePagina .redes .subRedes .links {
-            font-size: 17px; } }
+  body .contenedor header {
+    margin: 2mm 1cm;
+    top: 5px; }
+    body .contenedor header .color-encabezado .imagen {
+      width: 170px;
+      height: 150px; }
+    body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+      padding-left: 2mm;
+      margin: 4mm 5mm;
+      width: 180px;
+      height: 60px; }
+  body .contenedor .titulo .subTitulo {
+    width: 350px;
+    height: 90px;
+    font-size: 30px; }
+  body .contenedor main form .contenido {
+    height: 470px;
+    width: 800px;
+    font-size: 17px; }
+  body .contenedor .hipervinculos {
+    font-size: 17px;
+    margin-bottom: 3mm; }
+  body .contenedor footer {
+    margin-top: 1cm; }
+    body .contenedor footer .pieDePagina {
+      font-size: 4.5mm;
+      padding-top: 2mm; }
+      body .contenedor footer .pieDePagina .subPieDePagina {
+        padding: 1.3mm; }
+        body .contenedor footer .pieDePagina .subPieDePagina iframe {
+          width: 600px;
+          height: 300px; }
+      body .contenedor footer .pieDePagina .redes .subRedes {
+        width: 4cm;
+        height: 1.8cm; }
+        body .contenedor footer .pieDePagina .redes .subRedes .links {
+          font-size: 17px; } }
 
 /*fin de quering para computadoras*/

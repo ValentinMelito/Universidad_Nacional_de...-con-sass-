@@ -211,7 +211,7 @@ body{
             .color-encabezado{
                 .imagen{
 
-                    @include tamaño(120px, 100px);
+                    @include tamaño(150px, 120px);
                 }
             
                 .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
@@ -313,7 +313,7 @@ body{
             top: 5px;
             .color-encabezado{
                 .imagen{
-                    @include tamaño(170px, 150px);
+                    @include tamaño(170px, 170px);
                 }
             
                 .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
