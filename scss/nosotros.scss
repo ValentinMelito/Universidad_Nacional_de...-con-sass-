@@ -17,7 +17,6 @@ body{
           grid-template-areas:"header"
                               "titulo"
                               "main"
-                              "carru"
                               "hipervinculos"
                               "footer ";
           header{
@@ -98,59 +97,6 @@ body{
             font-size: 12px;
             font-family:Arial, Helvetica, sans-serif;
             text-align: justify;
-        }
-
-
-        .carousel{
-            grid-area: carru;
-            .carousel-inner{
-                .carousel-item{
-                    /*las review*/
-                    .hoja1{
-                        /*le hago flex para que el texto quede centrado en el recuadro*/
-                        @include flexCentroCentro;
-
-                        @include tamaño(200px, 100px);
-                        @include autoEmparejamiento;
-
-                        border: 2px solid black;
-                        background-color: white;
-
-                        margin-bottom: 1cm;
-                        font-size: 14px;
-                    }
-
-                    /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-                    .hoja2{
-                            
-                        @include flexCentroCentro;
-
-                        @include tamaño(200px, 100px);
-                        @include autoEmparejamiento;
-
-                        border: 2px solid black;
-                        background-color: white;
-
-                        margin-bottom: 1cm;
-                        font-size: 14px;
-                    }
-
-                    /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-                    .hoja3{
-                        
-                        @include flexCentroCentro;
-
-                        @include tamaño(200px, 100px);
-                        @include autoEmparejamiento;
-
-                        border: 2px solid black;
-                        background-color: white;
-
-                        margin-bottom: 1cm;
-                        font-size: 14px;
-                    } 
-                }
-            }
         }
 
         /*redireccion a otras hojas del html*/
@@ -289,37 +235,6 @@ body{
 
             font-size: 17px;
         }
-     
-        .carousel{
-            .carousel-inner{
-                .carousel-item{
-                    /*las review*/
-                    .hoja1{
-                        @include tamaño(500px, 200px);
-
-                        margin-bottom: 1cm;
-                        font-size: 17px;
-                    }
-
-                    /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-                    .hoja2{
-                        @include tamaño(500px, 200px);
-
-                        margin-bottom: 1cm;
-                        font-size: 17px;
-                    }
-
-                    /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-                    .hoja3{
-                        @include tamaño(500px, 200px);
-
-                        margin-bottom: 1cm;
-                        font-size: 17px;
-                    }
-      
-                } 
-            }
-        }
 
         
         .hipervinculos{
@@ -391,36 +306,6 @@ body{
             .contenido{
                 @include tamaño(800px, 470px);
                 font-size: 17px;
-            }
-
-            .carousel{
-                .carousel-inner{
-                    .carousel-item{
-                        /*las review*/
-                        .hoja1{
-                            @include tamaño(600px, 200px);
-
-                            margin-bottom: 1cm;
-                            font-size: 20px;
-                        }
-
-                        /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-                        .hoja2{
-                            @include tamaño(600px, 200px);
-
-                            margin-bottom: 1cm;
-                            font-size: 20px;
-                        }
-
-                        /*no me funciona la "," para que se repita un codigo en diferentes clases*/
-                        .hoja3{
-                            @include tamaño(600px, 200px);
-
-                            margin-bottom: 1cm;
-                            font-size: 20px;
-                        }
-                    }
-                }
             }
 
             .hipervinculos{

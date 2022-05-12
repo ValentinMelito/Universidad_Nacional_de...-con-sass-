@@ -106,12 +106,14 @@ body{
                 border: 3px dashed black;
                 font-size: $fontSizePromedioCelular;
 
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
                 .fotoNoticia{
-
-                    margin: 0px 3px 3px;
+                    margin-bottom: 3px;
                     height: 160px;
-                    width:250px;
-                    border: 2px black solid;
+                    width: 230px;
+                    border: 2px rgb(59, 56, 56) solid;
                 }
                 p{
                     margin-bottom: 3px;
@@ -262,7 +264,7 @@ body{
                     font-size: $fontSizePromedioTablet;
                     .fotoNoticia{
 
-                        margin: 0px 5px 4px;
+                        margin-bottom:  4px;
                         height: 230px;
                         width:400px;
                     }
@@ -388,7 +390,7 @@ body{
                     padding: 7mm;
                     .fotoNoticia{
 
-                        margin: 0px auto 4px;
+                        margin-bottom: 4px;
                         height: 260px;
                         width:420px;
                     }
