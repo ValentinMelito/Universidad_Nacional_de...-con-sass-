@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0; }
@@ -70,39 +69,8 @@ body {
       font-family: Arial, Helvetica, sans-serif;
       text-align: justify; }
     body .contenedor .carousel {
-      grid-area: carru; }
-      body .contenedor .carousel .carousel-inner .carousel-item {
-        /*las review*/ }
-        body .contenedor .carousel .carousel-inner .carousel-item .hojas {
-          /*le hago flex para que el texto quede centrado en el recuadro*/
-          display: flex;
-          flex-flow: row nowrap;
-          justify-content: start;
-          align-items: flex-start;
-          width: 200px;
-          height: 100px;
-          margin-left: auto;
-          margin-right: auto;
-          border: 2px solid black;
-          background-color: white;
-          margin-bottom: 1cm; }
-          body .contenedor .carousel .carousel-inner .carousel-item .hojas .fotoCarnet {
-            width: 165px;
-            height: 185px;
-            border: 2px black solid;
-            margin: auto 10px; }
-          body .contenedor .carousel .carousel-inner .carousel-item .hojas .texto {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: flex-start;
-            margin-top: 5px;
-            font-size: 17px; }
-            body .contenedor .carousel .carousel-inner .carousel-item .hojas .texto .review {
-              width: 430px;
-              height: 143px;
-              overflow: auto;
-              margin: 0px; }
+      grid-area: carru;
+      display: none; }
     body .contenedor .hipervinculos {
       grid-area: hipervinculos;
       display: flex;
@@ -193,27 +161,42 @@ body {
       margin-right: auto;
       padding: 2mm 7mm;
       font-size: 17px; }
-    body .contenedor .carousel .carousel-inner .carousel-item {
-      /*las review*/
-      /*no me funciona la "," para que se repita un codigo en diferentes clases
-                    .hoja2{
-                        @include tamaño(500px, 200px);
-
-                        margin-bottom: 1cm;
-                        font-size: 17px;
-                    }*/
-      /*no me funciona la "," para que se repita un codigo en diferentes clases
-                    .hoja3{
-                        @include tamaño(500px, 200px);
-
-                        margin-bottom: 1cm;
-                        font-size: 17px;
-                    }*/ }
-      body .contenedor .carousel .carousel-inner .carousel-item .hojas {
-        width: 500px;
-        height: 200px;
-        margin-bottom: 1cm;
-        font-size: 17px; }
+    body .contenedor .carousel {
+      grid-area: carru;
+      display: inline; }
+      body .contenedor .carousel .carousel-inner .carousel-item {
+        /*las review*/ }
+        body .contenedor .carousel .carousel-inner .carousel-item .hojas {
+          /*le hago flex para que el texto quede centrado en el recuadro*/
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: start;
+          align-items: flex-start;
+          width: 540px;
+          height: 200px;
+          margin-left: auto;
+          margin-right: auto;
+          border: 2px solid black;
+          background-color: antiquewhite;
+          border-radius: 10px;
+          margin-bottom: 1cm; }
+          body .contenedor .carousel .carousel-inner .carousel-item .hojas .fotoCarnet {
+            width: 165px;
+            height: 185px;
+            border: 2px black solid;
+            margin: auto 10px; }
+          body .contenedor .carousel .carousel-inner .carousel-item .hojas .texto {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 5px;
+            font-size: 17px; }
+            body .contenedor .carousel .carousel-inner .carousel-item .hojas .texto .review {
+              width: 340px;
+              height: 143px;
+              overflow: auto;
+              margin: 0px; }
     body .contenedor .hipervinculos {
       font-size: 15px; }
     body .contenedor footer .pieDePagina {
@@ -255,9 +238,10 @@ body {
       /*las review*/ }
       body .contenedor .carousel .carousel-inner .carousel-item .hojas {
         width: 600px;
-        height: 200px;
-        margin-bottom: 1cm;
-        font-size: 20px; }
+        height: 200px; }
+        body .contenedor .carousel .carousel-inner .carousel-item .hojas .review {
+          width: 430px;
+          height: 143px; }
     body .contenedor .hipervinculos {
       font-size: 17px;
       margin-bottom: 3mm; }
