@@ -245,7 +245,6 @@ body{
         }
      
         .carousel{
-            grid-area: carru;
             display: inline;
             .carousel-inner{
                 .carousel-item{
@@ -272,6 +271,7 @@ body{
                             margin: auto 10px;
                         }
                         .texto{
+                            //flex para que quede pegada a la foto
                             display: flex;
                             flex-flow: column nowrap;
                             justify-content: center;
@@ -280,7 +280,7 @@ body{
                             margin-top: 5px;
                             font-size: 17px;
                             .review{
-                                @include tamaño(340px, 143px);
+                                @include tamaño(340px, 105px);
                                 overflow: auto;
                                 margin:0px;
                             }
@@ -370,8 +370,10 @@ body{
                         /*las review*/
                         .hojas{
                             @include tamaño(600px, 200px);
+                            .texto{
                                 .review{
-                                @include tamaño(430px, 143px);
+                                    @include tamaño(430px, 105px);
+                                }
                             }
                         }
                     }
