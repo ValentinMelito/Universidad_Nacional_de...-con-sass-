@@ -30,10 +30,10 @@ body{
 
         .tituloYSubtitulo{
             grid-area: tituloYSubtitulo;
-
+            display: block;
             .titulo{
                 width: 9.5cm;
-                display: block;
+                
                 text-align: center;
                 font-family:'Times New Roman', Times, serif;
                 font-size: $fontSizePromedioCelular+11px; 
@@ -47,7 +47,6 @@ body{
 
             .informacionNoticia{
                 width: 5cm;
-                display: block;
                 text-align: center;
                 font-family:'Times New Roman', Times, serif;
                 font-size: $fontSizePromedioCelular+6px;
@@ -473,6 +472,7 @@ body{
 
     body{
         .contenedorCarreras{
+            padding: 0px;
             header{
                 top: 10px;
                 margin: 5px 4mm;
@@ -575,6 +575,7 @@ body{
 @media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 carrera//
     body{
         .contenedorCarreras{
+            padding: 0px;
             header{
                 margin: 2mm 1cm;
                 
@@ -757,9 +758,68 @@ body{
                 background-color: #2ff3fb;
             }
         }
+        /*Pie de pagina*/
+         .footerNosotros{
+            grid-area: footer;
+            margin-top: 10px;
+            .pieDePagina{//lo que no es redes//
 
-        @include footer;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
 
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: $fontSizePromedioCelular;
+
+                border-top: 3px solid rgb(51, 51, 0);
+                background-color: rgb(177, 129, 221);
+
+                .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
+                    padding: 5px;
+                    iframe{
+                        @include tamaño(300px, 150px);
+                    }
+                }
+
+                .redes{//los links a redes sociales//
+
+                    @include flexCentroCentro;
+                    
+                    @include autoEmparejamiento;
+
+                    .subRedes{//los contenedores de fotos//
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                                
+                        @include tamaño(2cm, 1cm);
+
+                        margin: 0px 10px 10px;    
+
+
+                        background-color: map-get($map: $botonRedes, $key: fondoRedes);
+                        border: map-get($map: $botonRedes, $key:bordeRedes);
+
+                        font-size: $fontSizePromedioCelular+1px;
+
+                            &:hover{//para que se agranden los cuadros de redes//
+                                transform:scale(1.19);
+                                transition: 1.5s;
+                            }
+                            
+                        //los links a redes//
+                        .links{
+                            text-decoration: none;
+                            list-style: none;
+                            color: black;
+                            font-size: $fontSizePromedioCelular -1px;
+
+                        }
+                    }
+                }
+            }
+        }   
     }
 }
 
@@ -769,6 +829,7 @@ body{
 
     body{
         .contenedorNosotros{
+            padding: 0px;
             header{
                 top: 10px;
                 margin: 5px 4mm;
@@ -857,6 +918,7 @@ body{
 @media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 nosotros//
     body{
         .contenedorNosotros{
+            padding: 0px;
             header{
                 margin: 2mm 1cm;
                 
@@ -1322,6 +1384,7 @@ body{
     
         body{
             .contenedorEgresado{
+                padding: 0px;
                 header{
                     top: 10px;
                     margin: 5px 4mm;
@@ -1363,6 +1426,7 @@ body{
                 @include autoEmparejamiento;
     
                 padding: 0px;
+                margin-bottom: 1cm;
 
                 .subInformacionEgresados{
                     margin: 20px 30px;
@@ -1373,9 +1437,11 @@ body{
          
             .carousel{
                 display: inline;
+                /*las review*/
                 .carousel-inner{
+                    padding: 0px;
                     .carousel-item{
-                        /*las review*/
+                        padding: 0px;
                         .hojas{
                             /*le hago flex para que el texto quede centrado en el recuadro*/
                             display: flex;
@@ -1406,6 +1472,9 @@ body{
     
                                 margin-top: 5px;
                                 font-size: 17px;
+                                .nombreAlumno{
+                                    font-size: $fontSizePromedioTablet+4px;
+                                }
                                 .review{
                                     @include tamaño(340px, 105px);
                                     overflow: auto;
@@ -1457,6 +1526,7 @@ body{
     @media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 egresado//
         body{
             .contenedorEgresado{
+                padding: 0px;
                 header{
                     margin: 2mm 1cm;
                     
@@ -1496,14 +1566,19 @@ body{
                         font-size: $fontSizePromedioMonitor;
                     }
                 }
-    
+                /*las review*/
                 .carousel{
+                    padding: 0px;    
                     .carousel-inner{
+                        padding: 0px;
                         .carousel-item{
-                            /*las review*/
+                            padding: 0px;
                             .hojas{
                                 @include tamaño(600px, 200px);
                                 .texto{
+                                    .nombreAlumno{
+                                        font-size: $fontSizePromedioMonitor+4px;
+                                    }
                                     .review{
                                         @include tamaño(430px, 105px);
                                     }
