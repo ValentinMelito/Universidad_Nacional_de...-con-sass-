@@ -354,7 +354,7 @@ body{
 
 body{
     background-image: url(../imagenes/fondo3.png);
-      .contenedor{
+      .contenedorCarreras{
           display: grid;
   
           grid-template-areas:"header"
@@ -472,7 +472,7 @@ body{
 @media only screen and (min-width:650px){
 
     body{
-        .contenedor{
+        .contenedorCarreras{
             header{
                 top: 10px;
                 margin: 5px 4mm;
@@ -574,7 +574,7 @@ body{
  
 @media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 carrera//
     body{
-        .contenedor{
+        .contenedorCarreras{
             header{
                 margin: 2mm 1cm;
                 
@@ -676,7 +676,7 @@ body{
 
 body{
     background-image: url(../imagenes/fondo3.png);
-      .contenedor{
+      .contenedorNosotros{
           display: grid;
   
           grid-template-areas:"header"
@@ -768,7 +768,7 @@ body{
 @media only screen and (min-width:650px){
 
     body{
-        .contenedor{
+        .contenedorNosotros{
             header{
                 top: 10px;
                 margin: 5px 4mm;
@@ -856,7 +856,7 @@ body{
      
 @media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 nosotros//
     body{
-        .contenedor{
+        .contenedorNosotros{
             header{
                 margin: 2mm 1cm;
                 
@@ -940,7 +940,7 @@ body{
 
 body{
     background-image: url(../imagenes/fondo3.png);
-    .contenedor{
+    .contenedorInscripciones{
         display: grid;
   
           grid-template-areas:"header"
@@ -1043,7 +1043,7 @@ body{
 @media only screen and (min-width:650px){
 
     body{
-        .contenedor{
+        .contenedorInscripciones{
             header{
                 top: 10px;
                 margin: 5px 4mm;
@@ -1132,7 +1132,7 @@ body{
          
     @media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 inscripciones//
         body{
-            .contenedor{
+            .contenedorInscripciones{
                 header{
                     margin: 2mm 1cm;
                     
@@ -1220,7 +1220,7 @@ body{
 
     body{
         background-image: url(../imagenes/fondo3.png);
-          .contenedor{
+          .contenedorEgresado{
               display: grid;
       
               grid-template-areas:"header"
@@ -1321,7 +1321,7 @@ body{
     @media only screen and (min-width:650px){
     
         body{
-            .contenedor{
+            .contenedorEgresado{
                 header{
                     top: 10px;
                     margin: 5px 4mm;
@@ -1456,7 +1456,7 @@ body{
          
     @media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 egresado//
         body{
-            .contenedor{
+            .contenedorEgresado{
                 header{
                     margin: 2mm 1cm;
                     

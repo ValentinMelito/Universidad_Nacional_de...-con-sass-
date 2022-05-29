@@ -260,7 +260,7 @@ body {
 /*hojaa carreras*/
 body {
   background-image: url(../imagenes/fondo3.png); }
-  body .contenedor {
+  body .contenedorCarreras {
     display: grid;
     grid-template-areas: "header"
  "tituloYSubtitulo"
@@ -270,39 +270,39 @@ body {
     /*todo lo que seria info en la pagina*/
     /*redireccion a otras hojas del html*/
     /*Pie de pagina*/ }
-    body .contenedor header {
+    body .contenedorCarreras header {
       position: sticky;
       z-index: 2;
       top: 1mm;
       grid-area: header;
       margin: 5px 7mm; }
-      body .contenedor header .color-encabezado {
+      body .contenedorCarreras header .color-encabezado {
         border: 3px solid black;
         border-radius: 50px;
         background-color: #666699; }
-        body .contenedor header .color-encabezado .imagen {
+        body .contenedorCarreras header .color-encabezado .imagen {
           margin-left: 5mm;
           width: 90px;
           height: 90px; }
-        body .contenedor header .color-encabezado .navbar-toggler {
+        body .contenedorCarreras header .color-encabezado .navbar-toggler {
           background-color: white; }
-        body .contenedor header .color-encabezado .palabrasEncabezado {
+        body .contenedorCarreras header .color-encabezado .palabrasEncabezado {
           justify-content: start; }
-          body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+          body .contenedorCarreras header .color-encabezado .palabrasEncabezado .nav-item {
             padding-left: 2mm;
             margin: 4mm 2mm;
             background-color: white; }
-    body .contenedor .tituloYSubtituloHojaCarrera {
+    body .contenedorCarreras .tituloYSubtituloHojaCarrera {
       grid-area: tituloYSubtitulo;
       /*lo que cambia entre hoja y hoja de htmls*/ }
-      body .contenedor .tituloYSubtituloHojaCarrera .tituloHojaCarrera {
+      body .contenedorCarreras .tituloYSubtituloHojaCarrera .tituloHojaCarrera {
         margin: 3mm 0mm 1mm;
         /*para que la caja se ponnga en el centro*/
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center; }
-        body .contenedor .tituloYSubtituloHojaCarrera .tituloHojaCarrera .subTituloHojaCarrera {
+        body .contenedorCarreras .tituloYSubtituloHojaCarrera .tituloHojaCarrera .subTituloHojaCarrera {
           /*para que el titulo se centre*/
           display: flex;
           flex-flow: row wrap;
@@ -315,13 +315,13 @@ body {
           background-color: #2ff3fb;
           font-size: 5mm;
           font-family: Arial, Helvetica, sans-serif; }
-      body .contenedor .tituloYSubtituloHojaCarrera .inicioHojaCarrera {
+      body .contenedorCarreras .tituloYSubtituloHojaCarrera .inicioHojaCarrera {
         width: 300px;
         margin: 0mm auto 1mm;
         background-color: white;
         padding: 0px 5px;
         font-size: 14px; }
-    body .contenedor .carreras {
+    body .contenedorCarreras .carreras {
       grid-area: main;
       height: 400px;
       width: 300px;
@@ -335,9 +335,9 @@ body {
       font-size: 14px;
       font-family: Arial, Helvetica, sans-serif;
       text-align: justify; }
-      body .contenedor .carreras .materias {
+      body .contenedorCarreras .carreras .materias {
         padding: 0px; }
-        body .contenedor .carreras .materias .subMaterias {
+        body .contenedorCarreras .carreras .materias .subMaterias {
           margin: 12px 10px 10px;
           padding: 7px;
           background-color: #ddddfa;
@@ -346,7 +346,7 @@ body {
           display: flex;
           flex-flow: column nowrap;
           align-items: center; }
-    body .contenedor .hipervinculos {
+    body .contenedorCarreras .hipervinculos {
       grid-area: hipervinculos;
       display: flex;
       flex-flow: column nowrap;
@@ -354,15 +354,15 @@ body {
       margin: 1cm 5mm 5mm;
       font-size: 14px;
       font-family: Arial, Helvetica, sans-serif; }
-      body .contenedor .hipervinculos .hijos {
+      body .contenedorCarreras .hipervinculos .hijos {
         text-align: center;
         width: auto;
         padding: 5px;
         background-color: #2ff3fb; }
-    body .contenedor footer {
+    body .contenedorCarreras footer {
       grid-area: footer;
       margin-top: 10px; }
-      body .contenedor footer .pieDePagina {
+      body .contenedorCarreras footer .pieDePagina {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -370,19 +370,19 @@ body {
         font-size: 14px;
         border-top: 3px solid #333300;
         background-color: #b181dd; }
-        body .contenedor footer .pieDePagina .subPieDePagina {
+        body .contenedorCarreras footer .pieDePagina .subPieDePagina {
           padding: 5px; }
-          body .contenedor footer .pieDePagina .subPieDePagina iframe {
+          body .contenedorCarreras footer .pieDePagina .subPieDePagina iframe {
             width: 300px;
             height: 150px; }
-        body .contenedor footer .pieDePagina .redes {
+        body .contenedorCarreras footer .pieDePagina .redes {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
           align-items: center;
           margin-left: auto;
           margin-right: auto; }
-          body .contenedor footer .pieDePagina .redes .subRedes {
+          body .contenedorCarreras footer .pieDePagina .redes .subRedes {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -392,10 +392,10 @@ body {
             background-color: #d5e3ff;
             border: 5px ridge #bafdff;
             font-size: 15px; }
-            body .contenedor footer .pieDePagina .redes .subRedes:hover {
+            body .contenedorCarreras footer .pieDePagina .redes .subRedes:hover {
               transform: scale(1.19);
               transition: 1.5s; }
-            body .contenedor footer .pieDePagina .redes .subRedes .links {
+            body .contenedorCarreras footer .pieDePagina .redes .subRedes .links {
               text-decoration: none;
               list-style: none;
               color: black;
@@ -403,17 +403,15 @@ body {
 
 /*para pantallas de tablets hojaaq1 carrera*/
 @media only screen and (min-width: 650px) {
-  body .contenedor {
-    /*todo lo que seria info en la pagina*/ }
-    body .contenedor header {
+    body .contenedorCarreras header {
       top: 10px;
       margin: 5px 4mm; }
-      body .contenedor header .color-encabezado .imagen {
+      body .contenedorCarreras header .color-encabezado .imagen {
         width: 120px;
         height: 100px; }
-      body .contenedor header .color-encabezado .palabrasEncabezado {
+      body .contenedorCarreras header .color-encabezado .palabrasEncabezado {
         justify-content: space-around; }
-        body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+        body .contenedorCarreras header .color-encabezado .palabrasEncabezado .nav-item {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
@@ -425,97 +423,95 @@ body {
           width: 120px;
           height: 80px;
           text-align: center; }
-    body .contenedor .tituloYSubtituloHojaCarrera .tituloHojaCarrera .subTituloHojaCarrera {
+    body .contenedorCarreras .tituloYSubtituloHojaCarrera .tituloHojaCarrera .subTituloHojaCarrera {
       width: 300px;
       height: 80px;
       font-size: 25px; }
-    body .contenedor .tituloYSubtituloHojaCarrera .inicioHojaCarrera {
+    body .contenedorCarreras .tituloYSubtituloHojaCarrera .inicioHojaCarrera {
       width: 600px;
       margin: 0mm auto 1mm;
       font-size: 20px; }
-    body .contenedor .carreras {
+    body .contenedorCarreras .carreras {
       height: 420px;
       width: 600px;
       margin-left: auto;
       margin-right: auto;
       padding: 0px;
       font-size: 19px; }
-      body .contenedor .carreras .materias {
+      body .contenedorCarreras .carreras .materias {
         padding: 0px; }
-        body .contenedor .carreras .materias .subMaterias {
+        body .contenedorCarreras .carreras .materias .subMaterias {
           margin: 20px 30px;
           padding: 10px;
           font-size: 19px; }
-    body .contenedor .hipervinculos {
+    body .contenedorCarreras .hipervinculos {
       font-size: 19px; }
-    body .contenedor footer .pieDePagina {
+    body .contenedorCarreras footer .pieDePagina {
       margin-top: 30px;
       font-size: 17px; }
-      body .contenedor footer .pieDePagina .subPieDePagina iframe {
+      body .contenedorCarreras footer .pieDePagina .subPieDePagina iframe {
         width: 500px;
         height: 250px; }
-      body .contenedor footer .pieDePagina .redes .subRedes {
+      body .contenedorCarreras footer .pieDePagina .redes .subRedes {
         width: 150px;
         height: 70px; }
-        body .contenedor footer .pieDePagina .redes .subRedes .links {
+        body .contenedorCarreras footer .pieDePagina .redes .subRedes .links {
           font-size: 15px; } }
 
 /*fin de quering para tablets*/
 @media only screen and (min-width: 1200px) {
-  body .contenedor {
-    /*todo lo que seria info en la pagina*/ }
-    body .contenedor header {
+    body .contenedorCarreras header {
       margin: 2mm 1cm;
       top: 5px; }
-      body .contenedor header .color-encabezado .imagen {
+      body .contenedorCarreras header .color-encabezado .imagen {
         width: 170px;
         height: 150px; }
-      body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+      body .contenedorCarreras header .color-encabezado .palabrasEncabezado .nav-item {
         padding-left: 2mm;
         margin: 4mm 5mm;
         width: 180px;
         height: 60px; }
-    body .contenedor .tituloYSubtituloHojaCarrera .tituloHojaCarrera .subTituloHojaCarrera {
+    body .contenedorCarreras .tituloYSubtituloHojaCarrera .tituloHojaCarrera .subTituloHojaCarrera {
       width: 350px;
       height: 90px;
       font-size: 30px; }
-    body .contenedor .tituloYSubtituloHojaCarrera .inicioHojaCarrera {
+    body .contenedorCarreras .tituloYSubtituloHojaCarrera .inicioHojaCarrera {
       width: 800px;
       margin: 0mm auto 2mm;
       font-size: 23px; }
-    body .contenedor .carreras {
+    body .contenedorCarreras .carreras {
       height: 470px;
       width: 800px;
       font-size: 19px; }
-      body .contenedor .carreras .materias {
+      body .contenedorCarreras .carreras .materias {
         padding: 0px; }
-        body .contenedor .carreras .materias .subMaterias {
+        body .contenedorCarreras .carreras .materias .subMaterias {
           margin: 30px 40px;
           padding: 7mm;
           font-size: 19px; }
-    body .contenedor .hipervinculos {
+    body .contenedorCarreras .hipervinculos {
       font-size: 19px;
       margin-bottom: 3mm; }
-    body .contenedor footer {
+    body .contenedorCarreras footer {
       margin-top: 1cm; }
-      body .contenedor footer .pieDePagina {
+      body .contenedorCarreras footer .pieDePagina {
         font-size: 4.5mm;
         padding-top: 2mm; }
-        body .contenedor footer .pieDePagina .subPieDePagina {
+        body .contenedorCarreras footer .pieDePagina .subPieDePagina {
           padding: 1.3mm; }
-          body .contenedor footer .pieDePagina .subPieDePagina iframe {
+          body .contenedorCarreras footer .pieDePagina .subPieDePagina iframe {
             width: 600px;
             height: 300px; }
-        body .contenedor footer .pieDePagina .redes .subRedes {
+        body .contenedorCarreras footer .pieDePagina .redes .subRedes {
           width: 4cm;
           height: 1.8cm; }
-          body .contenedor footer .pieDePagina .redes .subRedes .links {
+          body .contenedorCarreras footer .pieDePagina .redes .subRedes .links {
             font-size: 17px; } }
 
 /*fin de quering para computadoras*/
 body {
   background-image: url(../imagenes/fondo3.png); }
-  body .contenedor {
+  body .contenedorNosotros {
     display: grid;
     grid-template-areas: "header"
  "tituloYSubtitulo"
@@ -526,29 +522,29 @@ body {
     /*todo lo que seria info en la pagina*/
     /*redireccion a otras hojas del html*/
     /*Pie de pagina*/ }
-    body .contenedor header {
+    body .contenedorNosotros header {
       position: sticky;
       z-index: 2;
       top: 1mm;
       grid-area: header;
       margin: 5px 7mm; }
-      body .contenedor header .color-encabezado {
+      body .contenedorNosotros header .color-encabezado {
         border: 3px solid black;
         border-radius: 50px;
         background-color: #666699; }
-        body .contenedor header .color-encabezado .imagen {
+        body .contenedorNosotros header .color-encabezado .imagen {
           margin-left: 5mm;
           width: 90px;
           height: 90px; }
-        body .contenedor header .color-encabezado .navbar-toggler {
+        body .contenedorNosotros header .color-encabezado .navbar-toggler {
           background-color: white; }
-        body .contenedor header .color-encabezado .palabrasEncabezado {
+        body .contenedorNosotros header .color-encabezado .palabrasEncabezado {
           justify-content: start; }
-          body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+          body .contenedorNosotros header .color-encabezado .palabrasEncabezado .nav-item {
             padding-left: 2mm;
             margin: 4mm 2mm;
             background-color: white; }
-    body .contenedor .titulo {
+    body .contenedorNosotros .titulo {
       grid-area: tituloYSubtitulo;
       margin: 3mm 0mm 1mm;
       /*para que la caja se ponnga en el centro*/
@@ -556,7 +552,7 @@ body {
       flex-flow: row wrap;
       justify-content: center;
       align-items: center; }
-      body .contenedor .titulo .subTitulo {
+      body .contenedorNosotros .titulo .subTitulo {
         /*para que el titulo se centre*/
         display: flex;
         flex-flow: row wrap;
@@ -569,7 +565,7 @@ body {
         background-color: #2ff3fb;
         font-size: 5mm;
         font-family: Arial, Helvetica, sans-serif; }
-    body .contenedor .informacionFacultad {
+    body .contenedorNosotros .informacionFacultad {
       grid-area: main;
       width: 300px;
       height: 400px;
@@ -580,7 +576,7 @@ body {
       margin-right: auto;
       border: 3px solid black;
       background-color: #c39bd3; }
-      body .contenedor .informacionFacultad .subInformacion {
+      body .contenedorNosotros .informacionFacultad .subInformacion {
         margin: 12px 10px 10px;
         padding: 7px;
         background-color: #ddddfa;
@@ -588,7 +584,7 @@ body {
         font-size: 14px;
         font-family: Arial, Helvetica, sans-serif;
         text-align: justify; }
-    body .contenedor .hipervinculoNosotros {
+    body .contenedorNosotros .hipervinculoNosotros {
       grid-area: hipervinculos;
       display: flex;
       flex-flow: column nowrap;
@@ -596,15 +592,15 @@ body {
       margin: 1cm 5mm 5mm;
       font-size: 14px;
       font-family: Arial, Helvetica, sans-serif; }
-      body .contenedor .hipervinculoNosotros .hijos {
+      body .contenedorNosotros .hipervinculoNosotros .hijos {
         text-align: center;
         width: auto;
         padding: 5px;
         background-color: #2ff3fb; }
-    body .contenedor footer {
+    body .contenedorNosotros footer {
       grid-area: footer;
       margin-top: 10px; }
-      body .contenedor footer .pieDePagina {
+      body .contenedorNosotros footer .pieDePagina {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -612,19 +608,19 @@ body {
         font-size: 14px;
         border-top: 3px solid #333300;
         background-color: #b181dd; }
-        body .contenedor footer .pieDePagina .subPieDePagina {
+        body .contenedorNosotros footer .pieDePagina .subPieDePagina {
           padding: 5px; }
-          body .contenedor footer .pieDePagina .subPieDePagina iframe {
+          body .contenedorNosotros footer .pieDePagina .subPieDePagina iframe {
             width: 300px;
             height: 150px; }
-        body .contenedor footer .pieDePagina .redes {
+        body .contenedorNosotros footer .pieDePagina .redes {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
           align-items: center;
           margin-left: auto;
           margin-right: auto; }
-          body .contenedor footer .pieDePagina .redes .subRedes {
+          body .contenedorNosotros footer .pieDePagina .redes .subRedes {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -634,10 +630,10 @@ body {
             background-color: #d5e3ff;
             border: 5px ridge #bafdff;
             font-size: 15px; }
-            body .contenedor footer .pieDePagina .redes .subRedes:hover {
+            body .contenedorNosotros footer .pieDePagina .redes .subRedes:hover {
               transform: scale(1.19);
               transition: 1.5s; }
-            body .contenedor footer .pieDePagina .redes .subRedes .links {
+            body .contenedorNosotros footer .pieDePagina .redes .subRedes .links {
               text-decoration: none;
               list-style: none;
               color: black;
@@ -645,17 +641,15 @@ body {
 
 /*para pantallas de tablets hojaaq1 nosotros*/
 @media only screen and (min-width: 650px) {
-  body .contenedor {
-    /*todo lo que seria info en la pagina*/ }
-    body .contenedor header {
+    body .contenedorNosotros header {
       top: 10px;
       margin: 5px 4mm; }
-      body .contenedor header .color-encabezado .imagen {
+      body .contenedorNosotros header .color-encabezado .imagen {
         width: 120px;
         height: 100px; }
-      body .contenedor header .color-encabezado .palabrasEncabezado {
+      body .contenedorNosotros header .color-encabezado .palabrasEncabezado {
         justify-content: space-around; }
-        body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+        body .contenedorNosotros header .color-encabezado .palabrasEncabezado .nav-item {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
@@ -667,84 +661,82 @@ body {
           width: 120px;
           height: 80px;
           text-align: center; }
-    body .contenedor .titulo .subTitulo {
+    body .contenedorNosotros .titulo .subTitulo {
       width: 300px;
       height: 80px;
       font-size: 25px; }
-    body .contenedor .informacionFacultad {
+    body .contenedorNosotros .informacionFacultad {
       width: 600px;
       height: 420px;
       margin-left: auto;
       margin-right: auto;
       padding: 0px;
       font-size: 19px; }
-      body .contenedor .informacionFacultad .subInformacion {
+      body .contenedorNosotros .informacionFacultad .subInformacion {
         margin: 20px 30px;
         padding: 10px;
         font-size: 19px; }
-    body .contenedor .hipervinculoNosotros {
+    body .contenedorNosotros .hipervinculoNosotros {
       font-size: 19px; }
-    body .contenedor footer .pieDePagina {
+    body .contenedorNosotros footer .pieDePagina {
       margin-top: 30px;
       font-size: 17px; }
-      body .contenedor footer .pieDePagina .subPieDePagina iframe {
+      body .contenedorNosotros footer .pieDePagina .subPieDePagina iframe {
         width: 500px;
         height: 250px; }
-      body .contenedor footer .pieDePagina .redes .subRedes {
+      body .contenedorNosotros footer .pieDePagina .redes .subRedes {
         width: 150px;
         height: 70px; }
-        body .contenedor footer .pieDePagina .redes .subRedes .links {
+        body .contenedorNosotros footer .pieDePagina .redes .subRedes .links {
           font-size: 15px; } }
 
 /*fin de quering para tablets*/
 @media only screen and (min-width: 1200px) {
-  body .contenedor {
-    /*todo lo que seria info en la pagina*/ }
-    body .contenedor header {
+    body .contenedorNosotros header {
       margin: 2mm 1cm;
       top: 5px; }
-      body .contenedor header .color-encabezado .imagen {
+      body .contenedorNosotros header .color-encabezado .imagen {
         width: 170px;
         height: 150px; }
-      body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+      body .contenedorNosotros header .color-encabezado .palabrasEncabezado .nav-item {
         padding-left: 2mm;
         margin: 4mm 5mm;
         width: 180px;
         height: 60px; }
-    body .contenedor .titulo .subTitulo {
+    body .contenedorNosotros .titulo .subTitulo {
       width: 350px;
       height: 90px;
       font-size: 30px; }
-    body .contenedor .informacionFacultad {
+    body .contenedorNosotros .informacionFacultad {
       width: 800px;
       height: 470px; }
-      body .contenedor .informacionFacultad .subInformacion {
+      body .contenedorNosotros .informacionFacultad .subInformacion {
         margin: 30px 40px;
         padding: 7mm;
         font-size: 19px; }
-    body .contenedor .hipervinculoNosotros {
+    body .contenedorNosotros .hipervinculoNosotros {
       font-size: 19px;
       margin-bottom: 3mm; }
-    body .contenedor footer {
+    body .contenedorNosotros footer {
       margin-top: 1cm; }
-      body .contenedor footer .pieDePagina {
+      body .contenedorNosotros footer .pieDePagina {
         font-size: 17px;
         padding-top: 2mm; }
-        body .contenedor footer .pieDePagina .subPieDePagina {
+        body .contenedorNosotros footer .pieDePagina .subPieDePagina {
           padding: 1.3mm; }
-          body .contenedor footer .pieDePagina .subPieDePagina iframe {
+          body .contenedorNosotros footer .pieDePagina .subPieDePagina iframe {
             width: 600px;
             height: 300px; }
-        body .contenedor footer .pieDePagina .redes .subRedes {
+        body .contenedorNosotros footer .pieDePagina .redes .subRedes {
           width: 4cm;
           height: 1.8cm; }
-          body .contenedor footer .pieDePagina .redes .subRedes .links {
+          body .contenedorNosotros footer .pieDePagina .redes .subRedes .links {
             font-size: 17px; } }
 
 /*fin de quering para computadoras*/
 body {
   background-image: url(../imagenes/fondo3.png); }
-  body .contenedor {
+  body .contenedorInscripciones {
     display: grid;
     grid-template-areas: "header"
  "tituloYSubtitulo"
@@ -753,36 +745,36 @@ body {
  "footer ";
     /*redireccion a otras hojas del html*/
     /*Pie de pagina*/ }
-    body .contenedor header {
+    body .contenedorInscripciones header {
       position: sticky;
       z-index: 2;
       top: 1mm;
       grid-area: header;
       margin: 5px 7mm; }
-      body .contenedor header .color-encabezado {
+      body .contenedorInscripciones header .color-encabezado {
         border: 3px solid black;
         border-radius: 50px;
         background-color: #666699; }
-        body .contenedor header .color-encabezado .imagen {
+        body .contenedorInscripciones header .color-encabezado .imagen {
           margin-left: 5mm;
           width: 90px;
           height: 90px; }
-        body .contenedor header .color-encabezado .navbar-toggler {
+        body .contenedorInscripciones header .color-encabezado .navbar-toggler {
           background-color: white; }
-        body .contenedor header .color-encabezado .palabrasEncabezado {
+        body .contenedorInscripciones header .color-encabezado .palabrasEncabezado {
           justify-content: start; }
-          body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+          body .contenedorInscripciones header .color-encabezado .palabrasEncabezado .nav-item {
             padding-left: 2mm;
             margin: 4mm 2mm;
             background-color: white; }
-    body .contenedor .titulo {
+    body .contenedorInscripciones .titulo {
       grid-area: tituloYSubtitulo;
       margin: 3mm 0mm 1mm;
       /*para que la caja se ponnga en el centro*/
       display: flex;
       align-items: center;
       justify-content: center; }
-      body .contenedor .titulo .subTitulo {
+      body .contenedorInscripciones .titulo .subTitulo {
         /*para que el titulo se centr2*/
         display: flex;
         align-items: center;
@@ -794,7 +786,7 @@ body {
         background-color: #2ff3fb;
         font-size: 5mm;
         font-family: Arial, Helvetica, sans-serif; }
-    body .contenedor .formulario form .contenido {
+    body .contenedorInscripciones .formulario form .contenido {
       grid-area: main;
       height: 400px;
       width: 300px;
@@ -808,10 +800,10 @@ body {
       font-size: 14px;
       font-family: Arial, Helvetica, sans-serif;
       text-align: justify; }
-      body .contenedor .formulario form .contenido .opciones {
+      body .contenedorInscripciones .formulario form .contenido .opciones {
         padding: 7px 0mm;
         font-size: 14px; }
-    body .contenedor .hipervinculoInscripciones {
+    body .contenedorInscripciones .hipervinculoInscripciones {
       grid-area: hipervinculos;
       display: flex;
       flex-flow: column nowrap;
@@ -819,15 +811,15 @@ body {
       margin: 1cm 5mm 5mm;
       font-size: 14px;
       font-family: Arial, Helvetica, sans-serif; }
-      body .contenedor .hipervinculoInscripciones .hijos {
+      body .contenedorInscripciones .hipervinculoInscripciones .hijos {
         text-align: center;
         width: auto;
         padding: 5px;
         background-color: #2ff3fb; }
-    body .contenedor footer {
+    body .contenedorInscripciones footer {
       grid-area: footer;
       margin-top: 10px; }
-      body .contenedor footer .pieDePagina {
+      body .contenedorInscripciones footer .pieDePagina {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -835,19 +827,19 @@ body {
         font-size: 14px;
         border-top: 3px solid #333300;
         background-color: #b181dd; }
-        body .contenedor footer .pieDePagina .subPieDePagina {
+        body .contenedorInscripciones footer .pieDePagina .subPieDePagina {
           padding: 5px; }
-          body .contenedor footer .pieDePagina .subPieDePagina iframe {
+          body .contenedorInscripciones footer .pieDePagina .subPieDePagina iframe {
             width: 300px;
             height: 150px; }
-        body .contenedor footer .pieDePagina .redes {
+        body .contenedorInscripciones footer .pieDePagina .redes {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
           align-items: center;
           margin-left: auto;
           margin-right: auto; }
-          body .contenedor footer .pieDePagina .redes .subRedes {
+          body .contenedorInscripciones footer .pieDePagina .redes .subRedes {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -857,10 +849,10 @@ body {
             background-color: #d5e3ff;
             border: 5px ridge #bafdff;
             font-size: 15px; }
-            body .contenedor footer .pieDePagina .redes .subRedes:hover {
+            body .contenedorInscripciones footer .pieDePagina .redes .subRedes:hover {
               transform: scale(1.19);
               transition: 1.5s; }
-            body .contenedor footer .pieDePagina .redes .subRedes .links {
+            body .contenedorInscripciones footer .pieDePagina .redes .subRedes .links {
               text-decoration: none;
               list-style: none;
               color: black;
@@ -868,15 +860,15 @@ body {
 
 /*para pantallas de tablets hojaaq1 inscripciones*/
 @media only screen and (min-width: 650px) {
-  body .contenedor header {
+  body .contenedorInscripciones header {
     top: 10px;
     margin: 5px 4mm; }
-    body .contenedor header .color-encabezado .imagen {
+    body .contenedorInscripciones header .color-encabezado .imagen {
       width: 120px;
       height: 100px; }
-    body .contenedor header .color-encabezado .palabrasEncabezado {
+    body .contenedorInscripciones header .color-encabezado .palabrasEncabezado {
       justify-content: space-around; }
-      body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+      body .contenedorInscripciones header .color-encabezado .palabrasEncabezado .nav-item {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -888,79 +880,79 @@ body {
         width: 120px;
         height: 80px;
         text-align: center; }
-  body .contenedor .titulo .subTitulo {
+  body .contenedorInscripciones .titulo .subTitulo {
     width: 300px;
     height: 80px;
     font-size: 25px; }
-  body .contenedor .formulario form .contenido {
+  body .contenedorInscripciones .formulario form .contenido {
     height: 500px;
     width: 600px;
     margin-left: auto;
     margin-right: auto;
     padding: 2mm 7mm;
     font-size: 19px; }
-    body .contenedor .formulario form .contenido .opciones {
+    body .contenedorInscripciones .formulario form .contenido .opciones {
       font-size: 19px; }
-  body .contenedor .hipervinculoInscripciones {
+  body .contenedorInscripciones .hipervinculoInscripciones {
     font-size: 19px; }
-  body .contenedor footer .pieDePagina {
+  body .contenedorInscripciones footer .pieDePagina {
     margin-top: 30px;
     font-size: 17px; }
-    body .contenedor footer .pieDePagina .subPieDePagina iframe {
+    body .contenedorInscripciones footer .pieDePagina .subPieDePagina iframe {
       width: 500px;
       height: 250px; }
-    body .contenedor footer .pieDePagina .redes .subRedes {
+    body .contenedorInscripciones footer .pieDePagina .redes .subRedes {
       width: 150px;
       height: 70px; }
-      body .contenedor footer .pieDePagina .redes .subRedes .links {
+      body .contenedorInscripciones footer .pieDePagina .redes .subRedes .links {
         font-size: 15px; } }
 
 /*fin de quering para tablets*/
 @media only screen and (min-width: 1200px) {
-  body .contenedor header {
+  body .contenedorInscripciones header {
     margin: 2mm 1cm;
     top: 5px; }
-    body .contenedor header .color-encabezado .imagen {
+    body .contenedorInscripciones header .color-encabezado .imagen {
       width: 170px;
       height: 150px; }
-    body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+    body .contenedorInscripciones header .color-encabezado .palabrasEncabezado .nav-item {
       padding-left: 2mm;
       margin: 4mm 5mm;
       width: 180px;
       height: 60px; }
-  body .contenedor .titulo .subTitulo {
+  body .contenedorInscripciones .titulo .subTitulo {
     width: 350px;
     height: 90px;
     font-size: 30px; }
-  body .contenedor .formulario form .contenido {
+  body .contenedorInscripciones .formulario form .contenido {
     height: 500px;
     width: 800px;
     font-size: 19px; }
-  body .contenedor .formulario form .opciones {
+  body .contenedorInscripciones .formulario form .opciones {
     font-size: 19px; }
-  body .contenedor .hipervinculoInscripciones {
+  body .contenedorInscripciones .hipervinculoInscripciones {
     font-size: 19px;
     margin-bottom: 3mm; }
-  body .contenedor footer {
+  body .contenedorInscripciones footer {
     margin-top: 1cm; }
-    body .contenedor footer .pieDePagina {
+    body .contenedorInscripciones footer .pieDePagina {
       font-size: 17px;
       padding-top: 2mm; }
-      body .contenedor footer .pieDePagina .subPieDePagina {
+      body .contenedorInscripciones footer .pieDePagina .subPieDePagina {
         padding: 1.3mm; }
-        body .contenedor footer .pieDePagina .subPieDePagina iframe {
+        body .contenedorInscripciones footer .pieDePagina .subPieDePagina iframe {
           width: 600px;
           height: 300px; }
-      body .contenedor footer .pieDePagina .redes .subRedes {
+      body .contenedorInscripciones footer .pieDePagina .redes .subRedes {
         width: 4cm;
         height: 1.8cm; }
-        body .contenedor footer .pieDePagina .redes .subRedes .links {
+        body .contenedorInscripciones footer .pieDePagina .redes .subRedes .links {
           font-size: 17px; } }
 
 /*fin de quering para computadoras*/
 body {
   background-image: url(../imagenes/fondo3.png); }
-  body .contenedor {
+  body .contenedorEgresado {
     display: grid;
     grid-template-areas: "header"
  "tituloYSubtitulo"
@@ -972,29 +964,29 @@ body {
     /*todo lo que seria info en la pagina*/
     /*redireccion a otras hojas del html*/
     /*Pie de pagina*/ }
-    body .contenedor header {
+    body .contenedorEgresado header {
       position: sticky;
       z-index: 2;
       top: 1mm;
       grid-area: header;
       margin: 5px 7mm; }
-      body .contenedor header .color-encabezado {
+      body .contenedorEgresado header .color-encabezado {
         border: 3px solid black;
         border-radius: 50px;
         background-color: #666699; }
-        body .contenedor header .color-encabezado .imagen {
+        body .contenedorEgresado header .color-encabezado .imagen {
           margin-left: 5mm;
           width: 90px;
           height: 90px; }
-        body .contenedor header .color-encabezado .navbar-toggler {
+        body .contenedorEgresado header .color-encabezado .navbar-toggler {
           background-color: white; }
-        body .contenedor header .color-encabezado .palabrasEncabezado {
+        body .contenedorEgresado header .color-encabezado .palabrasEncabezado {
           justify-content: start; }
-          body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+          body .contenedorEgresado header .color-encabezado .palabrasEncabezado .nav-item {
             padding-left: 2mm;
             margin: 4mm 2mm;
             background-color: white; }
-    body .contenedor .titulo {
+    body .contenedorEgresado .titulo {
       grid-area: tituloYSubtitulo;
       margin: 3mm 0mm 1mm;
       /*para que la caja se ponnga en el centro*/
@@ -1002,7 +994,7 @@ body {
       flex-flow: row wrap;
       justify-content: center;
       align-items: center; }
-      body .contenedor .titulo .subTitulo {
+      body .contenedorEgresado .titulo .subTitulo {
         /*para que el titulo se centre*/
         display: flex;
         flex-flow: row wrap;
@@ -1015,7 +1007,7 @@ body {
         background-color: #2ff3fb;
         font-size: 5mm;
         font-family: Arial, Helvetica, sans-serif; }
-    body .contenedor .informacionEgresados {
+    body .contenedorEgresado .informacionEgresados {
       grid-area: main;
       width: 300px;
       height: 400px;
@@ -1026,7 +1018,7 @@ body {
       margin-right: auto;
       border: 3px solid black;
       background-color: #c39bd3; }
-      body .contenedor .informacionEgresados .subInformacionEgresados {
+      body .contenedorEgresado .informacionEgresados .subInformacionEgresados {
         margin: 12px 10px 10px;
         padding: 7px;
         background-color: #ddddfa;
@@ -1034,10 +1026,10 @@ body {
         font-size: 14px;
         font-family: Arial, Helvetica, sans-serif;
         text-align: justify; }
-    body .contenedor .carousel {
+    body .contenedorEgresado .carousel {
       grid-area: carru;
       display: none; }
-    body .contenedor .hipervinculosEgresados {
+    body .contenedorEgresado .hipervinculosEgresados {
       grid-area: hipervinculos;
       display: flex;
       flex-flow: column nowrap;
@@ -1045,15 +1037,15 @@ body {
       margin: 1cm 5mm 5mm;
       font-size: 14px;
       font-family: Arial, Helvetica, sans-serif; }
-      body .contenedor .hipervinculosEgresados .hijos {
+      body .contenedorEgresado .hipervinculosEgresados .hijos {
         text-align: center;
         width: auto;
         padding: 5px;
         background-color: #2ff3fb; }
-    body .contenedor footer {
+    body .contenedorEgresado footer {
       grid-area: footer;
       margin-top: 10px; }
-      body .contenedor footer .pieDePagina {
+      body .contenedorEgresado footer .pieDePagina {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -1061,19 +1053,19 @@ body {
         font-size: 14px;
         border-top: 3px solid #333300;
         background-color: #b181dd; }
-        body .contenedor footer .pieDePagina .subPieDePagina {
+        body .contenedorEgresado footer .pieDePagina .subPieDePagina {
           padding: 5px; }
-          body .contenedor footer .pieDePagina .subPieDePagina iframe {
+          body .contenedorEgresado footer .pieDePagina .subPieDePagina iframe {
             width: 300px;
             height: 150px; }
-        body .contenedor footer .pieDePagina .redes {
+        body .contenedorEgresado footer .pieDePagina .redes {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
           align-items: center;
           margin-left: auto;
           margin-right: auto; }
-          body .contenedor footer .pieDePagina .redes .subRedes {
+          body .contenedorEgresado footer .pieDePagina .redes .subRedes {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1083,10 +1075,10 @@ body {
             background-color: #d5e3ff;
             border: 5px ridge #bafdff;
             font-size: 15px; }
-            body .contenedor footer .pieDePagina .redes .subRedes:hover {
+            body .contenedorEgresado footer .pieDePagina .redes .subRedes:hover {
               transform: scale(1.19);
               transition: 1.5s; }
-            body .contenedor footer .pieDePagina .redes .subRedes .links {
+            body .contenedorEgresado footer .pieDePagina .redes .subRedes .links {
               text-decoration: none;
               list-style: none;
               color: black;
@@ -1094,17 +1086,15 @@ body {
 
 /*para pantallas de tablets*/
 @media only screen and (min-width: 650px) {
-  body .contenedor {
-    /*todo lo que seria info en la pagina*/ }
-    body .contenedor header {
+    body .contenedorEgresado header {
       top: 10px;
       margin: 5px 4mm; }
-      body .contenedor header .color-encabezado .imagen {
+      body .contenedorEgresado header .color-encabezado .imagen {
         width: 120px;
         height: 100px; }
-      body .contenedor header .color-encabezado .palabrasEncabezado {
+      body .contenedorEgresado header .color-encabezado .palabrasEncabezado {
         justify-content: space-around; }
-        body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+        body .contenedorEgresado header .color-encabezado .palabrasEncabezado .nav-item {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
@@ -1116,25 +1106,23 @@ body {
           width: 120px;
           height: 80px;
           text-align: center; }
-    body .contenedor .titulo .subTitulo {
+    body .contenedorEgresado .titulo .subTitulo {
       width: 300px;
       height: 80px;
       font-size: 25px; }
-    body .contenedor .informacionEgresados {
+    body .contenedorEgresado .informacionEgresados {
       width: 600px;
       height: 420px;
       margin-left: auto;
       margin-right: auto;
       padding: 0px; }
-      body .contenedor .informacionEgresados .subInformacionEgresados {
+      body .contenedorEgresado .informacionEgresados .subInformacionEgresados {
         margin: 20px 30px;
         padding: 10px;
         font-size: 19px; }
-    body .contenedor .carousel {
+    body .contenedorEgresado .carousel {
       display: inline; }
-      body .contenedor .carousel .carousel-inner .carousel-item {
-        /*las review*/ }
-        body .contenedor .carousel .carousel-inner .carousel-item .hojas {
+        body .contenedorEgresado .carousel .carousel-inner .carousel-item .hojas {
           /*le hago flex para que el texto quede centrado en el recuadro*/
           display: flex;
           flex-flow: row nowrap;
@@ -1148,89 +1136,85 @@ body {
           background-color: white;
           border-radius: 10px;
           margin-bottom: 1cm; }
-          body .contenedor .carousel .carousel-inner .carousel-item .hojas .fotoCarnet {
+          body .contenedorEgresado .carousel .carousel-inner .carousel-item .hojas .fotoCarnet {
             width: 165px;
             height: 185px;
             border: 2px black solid;
             margin: auto 10px; }
-          body .contenedor .carousel .carousel-inner .carousel-item .hojas .texto {
+          body .contenedorEgresado .carousel .carousel-inner .carousel-item .hojas .texto {
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
             align-items: flex-start;
             margin-top: 5px;
             font-size: 17px; }
-            body .contenedor .carousel .carousel-inner .carousel-item .hojas .texto .review {
+            body .contenedorEgresado .carousel .carousel-inner .carousel-item .hojas .texto .review {
               width: 340px;
               height: 105px;
               overflow: auto;
               margin: 0px; }
-    body .contenedor .hipervinculosEgresados {
+    body .contenedorEgresado .hipervinculosEgresados {
       font-size: 19px; }
-    body .contenedor footer .pieDePagina {
+    body .contenedorEgresado footer .pieDePagina {
       margin-top: 30px;
       font-size: 17px; }
-      body .contenedor footer .pieDePagina .subPieDePagina iframe {
+      body .contenedorEgresado footer .pieDePagina .subPieDePagina iframe {
         width: 500px;
         height: 250px; }
-      body .contenedor footer .pieDePagina .redes .subRedes {
+      body .contenedorEgresado footer .pieDePagina .redes .subRedes {
         width: 150px;
         height: 70px; }
-        body .contenedor footer .pieDePagina .redes .subRedes .links {
+        body .contenedorEgresado footer .pieDePagina .redes .subRedes .links {
           font-size: 15px; } }
 
 /*fin de quering para tablets*/
 @media only screen and (min-width: 1200px) {
-  body .contenedor {
-    /*todo lo que seria info en la pagina*/ }
-    body .contenedor header {
+    body .contenedorEgresado header {
       margin: 2mm 1cm;
       top: 5px; }
-      body .contenedor header .color-encabezado .imagen {
+      body .contenedorEgresado header .color-encabezado .imagen {
         width: 170px;
         height: 150px; }
-      body .contenedor header .color-encabezado .palabrasEncabezado .nav-item {
+      body .contenedorEgresado header .color-encabezado .palabrasEncabezado .nav-item {
         padding-left: 2mm;
         margin: 4mm 5mm;
         width: 180px;
         height: 60px; }
-    body .contenedor .titulo .subTitulo {
+    body .contenedorEgresado .titulo .subTitulo {
       width: 350px;
       height: 90px;
       font-size: 30px; }
-    body .contenedor .informacionEgresados {
+    body .contenedorEgresado .informacionEgresados {
       width: 800px;
       height: 390px;
       margin-bottom: 1cm; }
-      body .contenedor .informacionEgresados .subInformacionEgresados {
+      body .contenedorEgresado .informacionEgresados .subInformacionEgresados {
         margin: 30px 40px;
         padding: 7mm;
         font-size: 19px; }
-    body .contenedor .carousel .carousel-inner .carousel-item {
-      /*las review*/ }
-      body .contenedor .carousel .carousel-inner .carousel-item .hojas {
+      body .contenedorEgresado .carousel .carousel-inner .carousel-item .hojas {
         width: 600px;
         height: 200px; }
-        body .contenedor .carousel .carousel-inner .carousel-item .hojas .texto .review {
+        body .contenedorEgresado .carousel .carousel-inner .carousel-item .hojas .texto .review {
           width: 430px;
           height: 105px; }
-    body .contenedor .hipervinculosEgresados {
+    body .contenedorEgresado .hipervinculosEgresados {
       font-size: 19px;
       margin-bottom: 3mm; }
-    body .contenedor footer {
+    body .contenedorEgresado footer {
       margin-top: 1cm; }
-      body .contenedor footer .pieDePagina {
+      body .contenedorEgresado footer .pieDePagina {
         font-size: 17px;
         padding-top: 2mm; }
-        body .contenedor footer .pieDePagina .subPieDePagina {
+        body .contenedorEgresado footer .pieDePagina .subPieDePagina {
           padding: 1.3mm; }
-          body .contenedor footer .pieDePagina .subPieDePagina iframe {
+          body .contenedorEgresado footer .pieDePagina .subPieDePagina iframe {
             width: 600px;
             height: 300px; }
-        body .contenedor footer .pieDePagina .redes .subRedes {
+        body .contenedorEgresado footer .pieDePagina .redes .subRedes {
           width: 4cm;
           height: 1.8cm; }
-          body .contenedor footer .pieDePagina .redes .subRedes .links {
+          body .contenedorEgresado footer .pieDePagina .redes .subRedes .links {
             font-size: 17px; } }
 
 /*fin de quering para computadoras*/
