@@ -8,6 +8,11 @@
     padding: 0;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//hojaa index
+
 body{
   background-image: url(../imagenes/fondo3.png);
     .contenedor{
@@ -15,74 +20,47 @@ body{
         display: grid;
     
         grid-template-areas: "header "
-                             "h1   "
-                             "h2     "  
-                             "main  "
-                             "flecha"
+                             "tituloYSubtitulo"
+                             "main"
+                             "hipervinculos"
                              "footer ";
-        header{
-            //para que este sobre toda la pagina//
-            position: sticky;
-            z-index: 2;
-            top: 1mm;
-            grid-area: header;
-            margin: 5px 7mm;
-            
-            .color-encabezado{
-                border: 3px solid black;
-                border-radius: 50px;
-                background-color: rgb(102, 102, 153);
-
-                .imagen{
-                    margin-left: 5mm;
-                    @include tamaño(90px, 90px);
-                    
-                }
-                
-                //pongo  en blanco el boton que se desliza//
-                .navbar-toggler{
-                    background-color: white;
-                }
-                //son los hipervinculos del encabezado, que se ponen contra la izquierda cuando esta en pantalla del celu//
-                .palabrasEncabezado{  
-                    justify-content: start;
         
-                    .nav-item{
-                        padding-left: 2mm;
-                        margin: 4mm 2mm;
-                        background-color: white; 
-                    }
-                }
+        
+        @include encabezado;
+
+        .tituloYSubtitulo{
+            grid-area: tituloYSubtitulo;
+
+            .titulo{
+                width: 9.5cm;
+                display: block;
+                text-align: center;
+                font-family:'Times New Roman', Times, serif;
+                font-size: $fontSizePromedioCelular+11px; 
+                margin: 5px 5px 8px; 
+                background-color: rgb(212, 234, 252);
+
+                padding-left:1px;
+                padding-right: 1px;
+                @include autoEmparejamiento;
             }
-        }//fin encabezado//
 
-        h1{
-            grid-area: h1;
-            text-align: center;
-            font-family:'Times New Roman', Times, serif;
-            font-size: $fontSizePromedioCelular+11px; 
-            margin: 5px 5px 8px; 
+            .informacionNoticia{
+                width: 5cm;
+                display: block;
+                text-align: center;
+                font-family:'Times New Roman', Times, serif;
+                font-size: $fontSizePromedioCelular+6px;
 
-            background-color: rgb(212, 234, 252);
-            display:inline;
-            padding-left:1px;
-            padding-right: 1px;
-            @include autoEmparejamiento;
-        }
-        h2{
+                background-color: aliceblue;
+                padding-left:10px;
+                padding-right: 10px;
+                @include autoEmparejamiento;
+            }
         
-            grid-area: h2;
-            text-align: center;
-            font-family:'Times New Roman', Times, serif;
-            font-size: $fontSizePromedioCelular+6px;
-
-            background-color: aliceblue;
-            display:inline;
-            padding-left:10px;
-            padding-right: 10px;
-            @include autoEmparejamiento;
         }
-        main{
+        
+        .mainIndex{
             grid-area: main;
         
             margin-bottom: 10px;
@@ -124,7 +102,7 @@ body{
 
         /*flecha que manda para arriba*/
         .moverInicio{
-            grid-area: flecha;
+            grid-area: hipervinculos;
             
             .flecha{
                 @include tamaño(45px, 45px);
@@ -138,70 +116,7 @@ body{
                 padding: 0px;
             }
         }
-
-
-        /*Pie de pagina*/
-        footer{
-            grid-area: footer;
-            margin-top: 10px;
-            .pieDePagina{//lo que no es redes//
-
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-
-                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-size: $fontSizePromedioCelular;
-
-                border-top: 3px solid rgb(51, 51, 0);
-                background-color: rgb(177, 129, 221);
-
-                .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
-                    padding: 5px;
-                    iframe{
-                        @include tamaño(300px, 150px);
-                    }
-                }
-
-                .redes{//los links a redes sociales//
-
-                    @include flexCentroCentro;
-                    
-                    @include autoEmparejamiento;
-
-                    .subRedes{//los contenedores de fotos//
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                                
-                        @include tamaño(2cm, 1cm);
-
-                        margin: 0px 10px 10px;    
-
-
-                        background-color: map-get($map: $botonRedes, $key: fondoRedes);
-                        border: map-get($map: $botonRedes, $key:bordeRedes);
-
-                        font-size: $fontSizePromedioCelular+1px;
-
-                            &:hover{//para que se agranden los cuadros de redes//
-                                transform:scale(1.19);
-                                transition: 1.5s;
-                            }
-                            
-                        //los links a redes//
-                        .links{
-                            text-decoration: none;
-                            list-style: none;
-                            color: black;
-                            font-size: $fontSizePromedioCelular -1px;
-
-                        }
-                    }
-                }
-            }
-        }
+        @include footer;
     }
 }
 
@@ -212,7 +127,7 @@ body{
 
 
 
-//media queries//
+//media queries hojaaq1 index//
 /*para pantallas de tablets*/
 @media only screen and (min-width:650px){
 
@@ -243,18 +158,22 @@ body{
                 }
             }
         }//fin encabezado//
-        
-        h1{
-            font-size: $fontSizePromedioTablet+16px;  
-            padding: 0px;
 
-        }
-        h2{
-            font-size: $fontSizePromedioTablet+8px;
-            padding: 0px;
-        }
+        .tituloYSubtitulo{
+            .titulo{
+                width: 18cm;
+                font-size: $fontSizePromedioTablet+16px;  
+                padding: 0px;
 
-        main{
+            }
+            .informacionNoticia{
+                width: 10cm;
+                font-size: $fontSizePromedioTablet+8px;
+                padding: 0px;
+            }
+         }
+
+        .mainIndex{
 
             @include tamaño(500px, 700px);
             .noticia{
@@ -316,13 +235,7 @@ body{
 
 
 
-
-
-
-
-
-
-@media only screen and (min-width:1200px){ //media quering para monitores//
+@media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 index//
 
 body{
     .contenedor{
@@ -346,54 +259,40 @@ body{
             }
         }//fin encabezado//
         
+        .tituloYSubtitulo{
+            .titulo{// el titulo de inicio//
+                width: 30cm;
+                font-size: 1cm;  
+                padding-left:10px;
+                padding-right: 10px;
+                @include autoEmparejamiento;
 
-        h1{// el titulo de inicio//
-            background-color: aliceblue;
-            display:inline;
-            font-size: 1cm;  
-            padding-left:10px;
-            padding-right: 10px;
-            @include autoEmparejamiento;
+            }
 
+
+            .informacionNoticia{//inicio a noticias principales//
+             
+                margin: 5mm auto 1mm;
+                
+                font-size: 0.75cm;
+            }
         }
 
-
-        h2{//inicio a noticias principales//
-            display: inline;
+        .mainIndex{   //la hoja de noticias recientes//
+            
+            font-size: large;
         
-            width: 15cm; 
-            margin: 5mm auto 1mm;
-            
-            font-size: 0.75cm;
-        }
+            @include tamaño(15cm, 20cm);
 
+            .noticia{       //segundo recuadro dentro de las noticias//
 
-            //quiero poner una foto de fondo para que no haya tanto espacio en la pagina, pero cunado la pongo la foto se pixelea o no alcanza con la distnacia (temporal)//
-        .fondoMain{
+                margin: 1cm;
+                padding: 7mm;
+                font-size: $fontSizePromedioMonitor;
+                .fotoNoticia{
 
-        //    background-image: url(../imagenes/fondo3.png);
-            background-repeat:repeat;
-
-            margin: 0cm 1cm;
-            padding: 1mm 0mm 1mm;
-            main{   //la hoja de noticias recientes//
-
-                z-index: 1;//para que la imagen este por debajo del cuadro con info//
-            
-                font-size: large;
-            
-                @include tamaño(15cm, 20cm);
-
-                .noticia{       //segundo recuadro dentro de las noticias//
-
-                    margin: 1cm;
-                    padding: 7mm;
-                    .fotoNoticia{
-
-                        margin-bottom: 4px;
-                        height: 260px;
-                        width:420px;
-                    }
+                    margin-bottom: 4px;
+                    @include tamaño(420px, 260px);
                 }
             }
         }
@@ -435,3 +334,1217 @@ body{
     }
 } 
 }/*fin de quering para computadoras*/
+
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+/*hojaa carreras*/
+
+body{
+    background-image: url(../imagenes/fondo3.png);
+      .contenedor{
+          display: grid;
+  
+          grid-template-areas:"header"
+                              "tituloYSubtitulo"
+                              "main" 
+                              "hipervinculos"
+                              "footer ";
+
+                              
+        @include encabezado;
+
+
+
+        .tituloYSubtituloHojaCarrera{
+            grid-area: tituloYSubtitulo;
+        
+            /*lo que cambia entre hoja y hoja de htmls*/
+            .tituloHojaCarrera {    
+                margin: 3mm 0mm 1mm;
+
+                /*para que la caja se ponnga en el centro*/
+                @include flexCentroCentro;
+                
+                .subTituloHojaCarrera{
+                    /*para que el titulo se centre*/
+                    @include flexCentroCentro;
+
+                    @include tamaño(220px, 50px);
+
+                    padding:0mm;
+                    border: 3px dashed black;
+                    background-color: #2ff3fb;
+                    font-size: 5mm;
+                    font-family:Arial, Helvetica, sans-serif;
+                }
+            }
+        
+            .inicioHojaCarrera{
+                width: 300px;
+                margin: 0mm auto 1mm;
+            
+                background-color: white;
+                padding: 0px 5px;
+                font-size: $fontSizePromedioCelular;
+            }
+        }
+
+
+        /*todo lo que seria info en la pagina*/
+        .carreras{
+
+            grid-area: main;
+
+            height: 400px;
+            width: 300px;
+            overflow: auto;
+
+            margin: 0mm;
+            padding: 0;
+
+            @include autoEmparejamiento;
+
+            border: 3px solid black;
+            background-color: #c39bd3;
+
+            font-size: $fontSizePromedioCelular;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: justify;
+            .materias{
+                padding:0px;
+                .subMaterias{
+                    margin: 12px 10px 10px;
+                    padding: 7px;
+                    background-color: rgb(221, 221, 250); 
+                    border: 3px dashed black;
+                    font-size: $fontSizePromedioCelular;
+
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                }
+
+            }
+        }
+
+
+        /*redireccion a otras hojas del html*/
+        .hipervinculos{
+
+            grid-area: hipervinculos;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            margin: 1cm 5mm 5mm;
+
+            font-size: $fontSizePromedioCelular;
+            font-family:Arial, Helvetica, sans-serif;
+
+            .hijos{
+                text-align: center;
+                width: auto;
+                padding: 5px;
+                background-color: #2ff3fb;
+            }
+        }
+
+        @include footer;
+    }
+}
+
+
+
+//media queries//
+/*para pantallas de tablets hojaaq1 carrera*/
+@media only screen and (min-width:650px){
+
+    body{
+        .contenedor{
+            header{
+                top: 10px;
+                margin: 5px 4mm;
+                .color-encabezado{
+                    .imagen{
+
+                        @include tamaño(120px, 100px);
+                    }
+                
+                    .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
+
+                        justify-content: space-around ;
+                        .nav-item{
+                            @include flexCentroCentro;
+                            padding: 1mm 3mm;
+                            border: map-get($map:$botonNav , $key: bordeNav);
+                            background-color: map-get($map:$botonNav , $key: fondoNav);
+                            border-radius: map-get($map:$botonNav , $key: radioNav);
+
+                            @include tamaño(120px, 80px);
+                            text-align: center;
+                        }
+                    }
+                }
+            }//fin encabezado//
+
+            .tituloYSubtituloHojaCarrera{
+                .tituloHojaCarrera{
+                    .subTituloHojaCarrera{
+                        @include tamaño(300px, 80px);
+                        font-size: 25px;
+                    }
+                }
+
+
+                .inicioHojaCarrera{
+                    width: 600px;
+                    margin: 0mm auto 1mm;
+                
+                    font-size: 20px;
+                
+                }
+            }
+        
+            /*todo lo que seria info en la pagina*/
+            .carreras{
+
+                height: 420px;
+                width: 600px;
+
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0px;
+
+                font-size: $fontSizePromedioTablet;
+                .materias{
+                    padding:0px; 
+                    .subMaterias{
+                        margin: 20px 30px;
+                        padding: 10px;
+                        font-size: $fontSizePromedioTablet;
+                    }
+                }
+            }
+            
+            .hipervinculos{
+                font-size: $fontSizePromedioTablet;
+            }
+
+            footer{
+                .pieDePagina{
+                    margin-top: 30px;
+                    font-size: $fontSizePromedioTablet - 2px;
+
+                    .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
+                        iframe{
+                            @include tamaño(500px, 250px);
+                        }
+                    }
+
+                    .redes{//los links a redes sociales//
+
+                        .subRedes{
+
+                            @include tamaño(150px, 70px);
+                                
+                            //los links a redes//
+                            .links{
+                                font-size: $fontSizePromedioTablet - 4px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}/*fin de quering para tablets*/
+ 
+@media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 carrera//
+    body{
+        .contenedor{
+            header{
+                margin: 2mm 1cm;
+                
+                top: 5px;
+                .color-encabezado{
+                    .imagen{
+                        @include tamaño(170px, 150px);
+                    }
+                
+                    .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
+                        .nav-item{
+                            padding-left: 2mm;
+                            margin: 4mm 5mm;
+
+                            @include tamaño(180px, 60px);
+                        }
+                    }
+                }
+            }//fin encabezado//
+    
+
+            .tituloYSubtituloHojaCarrera{
+                .tituloHojaCarrera{ 
+                    .subTituloHojaCarrera{
+                        @include tamaño(350px, 90px);
+                        font-size: 30px;
+                
+                    }
+                }
+
+                .inicioHojaCarrera{
+                    width: 800px;
+                    margin: 0mm auto 2mm;
+                
+                    font-size: 23px;
+                }
+            }
+        
+            /*todo lo que seria info en la pagina*/
+            .carreras{
+                height: 470px;
+                width: 800px;
+        
+                font-size: $fontSizePromedioMonitor;
+                .materias{                    
+                    padding:0px;
+                    .subMaterias{
+                        margin: 30px 40px;
+                        padding: 7mm;
+                        font-size: $fontSizePromedioMonitor;
+                    }
+                } 
+            }
+
+            .hipervinculos{
+                font-size: $fontSizePromedioMonitor;
+                margin-bottom: 3mm;
+            }
+            footer{
+                margin-top: 1cm;
+                .pieDePagina{   //lo que no es redes//
+        
+                        font-size: 4.5mm;
+                    
+                        padding-top: 2mm;
+                        .subPieDePagina{    //los datos sobre ubicacion y numeros (todo menos redes)//
+                            padding: 1.3mm;
+                            iframe{
+                                @include tamaño(600px, 300px);
+                            }
+                        }   
+
+                    .redes{    //los links a redes sociales//
+                        .subRedes{      //los contenedores de redes//
+                            @include tamaño(4cm, 1.8cm);
+                            
+                            .links{     //los links a redes//
+                                font-size: 17px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}/*fin de quering para computadoras*/
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//hojaa nosotros
+
+
+body{
+    background-image: url(../imagenes/fondo3.png);
+      .contenedor{
+          display: grid;
+  
+          grid-template-areas:"header"
+                              "tituloYSubtitulo"
+                              "main"
+                              "hipervinculos"
+                              "footer ";
+                              
+
+        @include encabezado;
+        
+        /*lo que cambia entre hoja y hoja de htmls*/
+        .titulo {    
+
+            grid-area: tituloYSubtitulo;
+            margin: 3mm 0mm 1mm;
+
+            /*para que la caja se ponnga en el centro*/
+            @include flexCentroCentro;
+            
+            .subTitulo{
+                /*para que el titulo se centre*/
+                @include flexCentroCentro;
+
+                @include tamaño(220px, 50px);
+
+                padding:0mm;
+                border: 3px dashed black;
+                background-color: #2ff3fb;
+                font-size: 5mm;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+        }
+
+        /*todo lo que seria info en la pagina*/
+        .informacionFacultad{
+
+            grid-area: main;
+
+            @include tamaño(300px, 400px);
+            overflow: auto;
+
+            margin: 0mm;
+            padding: 0mm;
+
+            @include autoEmparejamiento;
+
+            border: 3px solid black;
+            background-color: rgb(195, 155, 211 );            
+
+            .subInformacion{
+                margin: 12px 10px 10px;
+                padding: 7px;
+                background-color: rgb(221, 221, 250); 
+                border: 3px dashed black;
+                font-size: $fontSizePromedioCelular;
+                font-family:Arial, Helvetica, sans-serif;
+                text-align: justify;
+            }
+        }
+
+        /*redireccion a otras hojas del html*/
+        .hipervinculoNosotros{
+
+            grid-area: hipervinculos;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            margin: 1cm 5mm 5mm;
+
+            font-size: $fontSizePromedioCelular;
+            font-family:Arial, Helvetica, sans-serif;
+
+            .hijos{
+                text-align: center;
+                width: auto;
+                padding: 5px;
+                background-color: #2ff3fb;
+            }
+        }
+
+        @include footer;
+
+    }
+}
+
+//media queries//
+/*para pantallas de tablets hojaaq1 nosotros*/
+@media only screen and (min-width:650px){
+
+    body{
+        .contenedor{
+            header{
+                top: 10px;
+                margin: 5px 4mm;
+                .color-encabezado{
+                    .imagen{
+    
+                        @include tamaño(120px, 100px);
+                    }
+                
+                    .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
+    
+                        justify-content: space-around ;
+                        .nav-item{
+                            @include flexCentroCentro;
+                            padding: 1mm 3mm;
+                            border: map-get($map:$botonNav , $key: bordeNav);
+                            background-color: map-get($map:$botonNav , $key: fondoNav);
+                            border-radius: map-get($map:$botonNav , $key: radioNav);
+    
+                            @include tamaño(120px, 80px);
+                            text-align: center;
+                        }
+                    }
+                }
+            }//fin encabezado//
+
+        .titulo{
+            .subTitulo{
+                @include tamaño(300px, 80px);
+            
+                font-size: 25px;
+        
+            }
+        }
+
+        /*todo lo que seria info en la pagina*/
+        .informacionFacultad{
+            @include tamaño(600px, 420px);
+            @include autoEmparejamiento;
+
+            padding: 0px;
+
+            font-size: $fontSizePromedioTablet;
+            .subInformacion{
+                margin: 20px 30px;
+                padding: 10px;
+                font-size: $fontSizePromedioTablet;
+            }
+        }
+
+        
+        .hipervinculoNosotros{
+            font-size: $fontSizePromedioTablet;
+        }
+
+        footer{
+            .pieDePagina{
+                margin-top: 30px;
+                font-size: $fontSizePromedioTablet - 2px;
+
+                .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
+                    iframe{
+                        @include tamaño(500px, 250px);
+                    }
+                }
+
+                .redes{//los links a redes sociales//
+
+                    .subRedes{
+
+                        @include tamaño(150px, 70px);
+                            
+                        //los links a redes//
+                        .links{
+                            font-size: $fontSizePromedioTablet - 4px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
+}/*fin de quering para tablets*/
+     
+@media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 nosotros//
+    body{
+        .contenedor{
+            header{
+                margin: 2mm 1cm;
+                
+                top: 5px;
+                .color-encabezado{
+                    .imagen{
+                        @include tamaño(170px, 150px);
+                    }
+                
+                    .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
+                        .nav-item{
+                            padding-left: 2mm;
+                            margin: 4mm 5mm;
+    
+                            @include tamaño(180px, 60px);
+                        }
+                    }
+                }
+            }//fin encabezado//
+     
+            .titulo{ 
+                .subTitulo{
+                    @include tamaño(350px, 90px);
+                    font-size: 30px;
+            
+                }
+            }
+
+            /*todo lo que seria info en la pagina*/
+            .informacionFacultad{
+                @include tamaño(800px, 470px);
+                .subInformacion{
+                    margin: 30px 40px;
+                    padding: 7mm;
+                    font-size: $fontSizePromedioMonitor;
+                }
+            }
+
+            .hipervinculoNosotros{
+                font-size: $fontSizePromedioMonitor;
+                margin-bottom: 3mm;
+            }
+            footer{
+                margin-top: 1cm;
+                .pieDePagina{   //lo que no es redes//
+        
+                        font-size: $fontSizePromedioMonitor - 2px;
+                    
+                        padding-top: 2mm;
+                        .subPieDePagina{    //los datos sobre ubicacion y numeros (todo menos redes)//
+                            padding: 1.3mm;
+                            iframe{
+                                @include tamaño(600px, 300px);
+                            }
+                        }   
+    
+                    .redes{    //los links a redes sociales//
+                        .subRedes{      //los contenedores de redes//
+                            @include tamaño(4cm, 1.8cm);
+                            
+                            .links{     //los links a redes//
+                                font-size: 17px;
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}/*fin de quering para computadoras*/
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//hojaa inscripcion
+
+body{
+    background-image: url(../imagenes/fondo3.png);
+    .contenedor{
+        display: grid;
+  
+          grid-template-areas:"header"
+                              "tituloYSubtitulo"
+                              "main"
+                              "hipervinculos"
+                              "footer ";
+
+        @include encabezado;
+
+        .titulo {    
+
+            grid-area: tituloYSubtitulo;
+            margin: 3mm 0mm 1mm;
+        
+            /*para que la caja se ponnga en el centro*/
+            display: flex;
+        
+            align-items: center;
+            justify-content: center;
+            .subTitulo{
+                
+                /*para que el titulo se centr2*/
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+                height: 50px;
+                width: 220px;
+            
+                padding:0mm;
+                border: 3px dashed black;
+                background-color: #2ff3fb;
+                font-size: 5mm;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+        }
+
+        .formulario{
+            form{
+                .contenido{
+                    grid-area: main;
+
+                    height: 400px;
+                    width: 300px;
+                    overflow: auto;
+
+                    margin: 5mm;
+                    padding: 2mm 5mm;
+
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    border: 3px solid black;
+                    background-color: #ddddfa;
+
+                    font-size: $fontSizePromedioCelular;
+                    font-family:Arial, Helvetica, sans-serif;
+                    text-align: justify;
+
+                    .opciones{
+                        padding: 7px 0mm;
+                    
+                        font-size: $fontSizePromedioCelular;
+                    }
+                }
+            }
+        }
+        /*redireccion a otras hojas del html*/
+        .hipervinculoInscripciones{
+
+            grid-area: hipervinculos;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            margin: 1cm 5mm 5mm;
+
+            font-size: $fontSizePromedioCelular;
+            font-family:Arial, Helvetica, sans-serif;
+
+            .hijos{
+                text-align: center;
+                width: auto;
+                padding: 5px;
+                background-color: #2ff3fb;
+            }
+        }
+
+        @include footer;
+    }
+}
+
+
+
+
+
+
+//media queries//
+/*para pantallas de tablets hojaaq1 inscripciones*/
+@media only screen and (min-width:650px){
+
+    body{
+        .contenedor{
+            header{
+                top: 10px;
+                margin: 5px 4mm;
+                .color-encabezado{
+                    .imagen{
+
+                        @include tamaño(120px, 100px);
+                    }
+                
+                    .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
+
+                        justify-content: space-around ;
+                        .nav-item{
+                            @include flexCentroCentro;
+                            padding: 1mm 3mm;
+                            border: map-get($map:$botonNav , $key: bordeNav);
+                            background-color: map-get($map:$botonNav , $key: fondoNav);
+                            border-radius: map-get($map:$botonNav , $key: radioNav);
+
+                            @include tamaño(120px, 80px);
+                            text-align: center;
+                        }
+                    }
+                }
+            }//fin encabezado//
+
+            .titulo{
+                .subTitulo{
+                    @include tamaño(300px, 80px);
+                
+                    font-size: 25px;
+            
+                }
+            }
+
+            .formulario{
+                form{
+                    .contenido{
+                        height: 500px;
+                        width: 600px;
+
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding: 2mm 7mm;
+                        font-size: $fontSizePromedioTablet;
+                        .opciones{
+                            font-size: $fontSizePromedioTablet ;
+                        }
+                    }
+                }
+            }
+
+            .hipervinculoInscripciones{
+                font-size: $fontSizePromedioTablet;
+            }
+    
+            footer{
+                .pieDePagina{
+                    margin-top: 30px;
+                    font-size: $fontSizePromedioTablet - 2px;
+    
+                    .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
+                        iframe{
+                            @include tamaño(500px, 250px);
+                        }
+                    }
+    
+                    .redes{//los links a redes sociales//
+    
+                        .subRedes{
+    
+                            @include tamaño(150px, 70px);
+                                
+                            //los links a redes//
+                            .links{
+                                font-size: $fontSizePromedioTablet - 4px;
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    }/*fin de quering para tablets*/
+         
+    @media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 inscripciones//
+        body{
+            .contenedor{
+                header{
+                    margin: 2mm 1cm;
+                    
+                    top: 5px;
+                    .color-encabezado{
+                        .imagen{
+                            @include tamaño(170px, 150px);
+                        }
+                    
+                        .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
+                            .nav-item{
+                                padding-left: 2mm;
+                                margin: 4mm 5mm;
+        
+                                @include tamaño(180px, 60px);
+                            }
+                        }
+                    }
+                }//fin encabezado//
+         
+                .titulo{ 
+                    .subTitulo{
+                        @include tamaño(350px, 90px);
+                        font-size: 30px;
+                
+                    }
+                }
+
+                .formulario{
+                    form{
+                        .contenido{
+                            height: 500px;
+                            width: 800px;
+
+                            font-size: $fontSizePromedioMonitor;
+                        }
+                        .opciones{
+                            font-size: $fontSizePromedioMonitor;
+                        }
+                    }
+                }
+
+                .hipervinculoInscripciones{
+                    font-size: $fontSizePromedioMonitor;
+                    margin-bottom: 3mm;
+                }
+                footer{
+                    margin-top: 1cm;
+                    .pieDePagina{   //lo que no es redes//
+            
+                            font-size: $fontSizePromedioMonitor - 2px;
+                        
+                            padding-top: 2mm;
+                            .subPieDePagina{    //los datos sobre ubicacion y numeros (todo menos redes)//
+                                padding: 1.3mm;
+                                iframe{
+                                    @include tamaño(600px, 300px);
+                                }
+                            }   
+        
+                        .redes{    //los links a redes sociales//
+                            .subRedes{      //los contenedores de redes//
+                                @include tamaño(4cm, 1.8cm);
+                                
+                                .links{     //los links a redes//
+                                    font-size: 17px;
+        
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }/*fin de quering para computadoras*/
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//hojaa egresado
+
+    body{
+        background-image: url(../imagenes/fondo3.png);
+          .contenedor{
+              display: grid;
+      
+              grid-template-areas:"header"
+                                  "tituloYSubtitulo"
+                                  "main"
+                                  "carru"
+                                  "hipervinculos"
+                                  "footer ";
+                                  
+            @include encabezado;
+            
+            /*lo que cambia entre hoja y hoja de htmls*/
+            .titulo {    
+    
+                grid-area: tituloYSubtitulo;
+                margin: 3mm 0mm 1mm;
+    
+                /*para que la caja se ponnga en el centro*/
+                @include flexCentroCentro;
+                
+                .subTitulo{
+                    /*para que el titulo se centre*/
+                    @include flexCentroCentro;
+    
+                    @include tamaño(220px, 50px);
+    
+                    padding:0mm;
+                    border: 3px dashed black;
+                    background-color: #2ff3fb;
+                    font-size: 5mm;
+                    font-family:Arial, Helvetica, sans-serif;
+                }
+            }
+    
+            /*todo lo que seria info en la pagina*/
+            .informacionEgresados{
+    
+                grid-area: main;
+    
+                @include tamaño(300px, 400px);
+                overflow: auto;
+    
+                margin: 0px;
+                padding: 0px;
+    
+                @include autoEmparejamiento;
+    
+                border: 3px solid black;
+                background-color: #c39bd3;
+    
+                
+                .subInformacionEgresados{
+
+                    margin: 12px 10px 10px;
+                    padding: 7px;
+                    background-color: rgb(221, 221, 250); 
+                    border: 3px dashed black;                    
+
+                    font-size: $fontSizePromedioCelular;
+                    font-family:Arial, Helvetica, sans-serif;
+                    text-align: justify;
+                }
+            }
+    
+    
+            .carousel{
+                grid-area: carru;
+                display:none;
+            }
+    
+            /*redireccion a otras hojas del html*/
+            .hipervinculosEgresados{
+    
+                grid-area: hipervinculos;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                margin: 1cm 5mm 5mm;
+    
+                font-size: $fontSizePromedioCelular;
+                font-family:Arial, Helvetica, sans-serif;
+    
+                .hijos{
+                    text-align: center;
+                    width: auto;
+                    padding: 5px;
+                    background-color: #2ff3fb;
+                }
+            }
+    
+            @include footer;
+        
+        }
+    }
+    
+    //media queries hojaaq1 egresado//
+    /*para pantallas de tablets*/
+    @media only screen and (min-width:650px){
+    
+        body{
+            .contenedor{
+                header{
+                    top: 10px;
+                    margin: 5px 4mm;
+                    .color-encabezado{
+                        .imagen{
+        
+                            @include tamaño(120px, 100px);
+                        }
+                    
+                        .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
+        
+                            justify-content: space-around ;
+                            .nav-item{
+                                @include flexCentroCentro;
+                                padding: 1mm 3mm;
+                                border: map-get($map:$botonNav , $key: bordeNav);
+                                background-color: map-get($map:$botonNav , $key: fondoNav);
+                                border-radius: map-get($map:$botonNav , $key: radioNav);
+        
+                                @include tamaño(120px, 80px);
+                                text-align: center;
+                            }
+                        }
+                    }
+                }//fin encabezado//
+    
+            .titulo{
+                .subTitulo{
+                    @include tamaño(300px, 80px);
+                
+                    font-size: 25px;
+            
+                }
+            }
+    
+            /*todo lo que seria info en la pagina*/
+            .informacionEgresados{
+                @include tamaño(600px, 420px);
+                @include autoEmparejamiento;
+    
+                padding: 0px;
+
+                .subInformacionEgresados{
+                    margin: 20px 30px;
+                    padding: 10px;
+                    font-size: $fontSizePromedioTablet;
+                }
+            }
+         
+            .carousel{
+                display: inline;
+                .carousel-inner{
+                    .carousel-item{
+                        /*las review*/
+                        .hojas{
+                            /*le hago flex para que el texto quede centrado en el recuadro*/
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: start;
+                            align-items: flex-start;
+                            
+    
+                            @include tamaño(540px, 200px);
+                            @include autoEmparejamiento;
+    
+                            border: 2px solid black;
+                            background-color: white;
+                            border-radius: 10px;
+                            margin-bottom: 1cm;
+                            
+                            .fotoCarnet{
+                                @include tamaño(165px, 185px);
+                                border: 2px black solid;
+                                margin: auto 10px;
+                            }
+                            .texto{
+                                //flex para que quede pegada a la foto
+                                display: flex;
+                                flex-flow: column nowrap;
+                                justify-content: center;
+                                align-items: flex-start;
+    
+                                margin-top: 5px;
+                                font-size: 17px;
+                                .review{
+                                    @include tamaño(340px, 105px);
+                                    overflow: auto;
+                                    margin:0px;
+                                }
+                               
+                        
+                            }
+                        }
+                    }
+                }
+            }
+    
+            
+            .hipervinculosEgresados{
+                font-size: $fontSizePromedioTablet;
+            }
+    
+            footer{
+                .pieDePagina{
+                    margin-top: 30px;
+                    font-size: $fontSizePromedioTablet - 2px;
+    
+                    .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
+                        iframe{
+                            @include tamaño(500px, 250px);
+                        }
+                    }
+    
+                    .redes{//los links a redes sociales//
+    
+                        .subRedes{
+    
+                            @include tamaño(150px, 70px);
+                                
+                            //los links a redes//
+                            .links{
+                                font-size: $fontSizePromedioTablet - 4px;
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    }/*fin de quering para tablets*/
+         
+    @media only screen and (min-width:1200px){ //media quering para monitores hojaaq2 egresado//
+        body{
+            .contenedor{
+                header{
+                    margin: 2mm 1cm;
+                    
+                    top: 5px;
+                    .color-encabezado{
+                        .imagen{
+                            @include tamaño(170px, 150px);
+                        }
+                    
+                        .palabrasEncabezado{//son los hipervinculos del encabezado, que se ponen espaciados//
+                            .nav-item{
+                                padding-left: 2mm;
+                                margin: 4mm 5mm;
+        
+                                @include tamaño(180px, 60px);
+                            }
+                        }
+                    }
+                }//fin encabezado//
+         
+                .titulo{ 
+                    .subTitulo{
+                        @include tamaño(350px, 90px);
+                        font-size: 30px;
+                
+                    }
+                }
+    
+                /*todo lo que seria info en la pagina*/
+                .informacionEgresados{
+                    @include tamaño(800px, 390px);
+                    margin-bottom: 1cm;
+
+                    .subInformacionEgresados{
+                        margin: 30px 40px;
+                        padding: 7mm;
+                        font-size: $fontSizePromedioMonitor;
+                    }
+                }
+    
+                .carousel{
+                    .carousel-inner{
+                        .carousel-item{
+                            /*las review*/
+                            .hojas{
+                                @include tamaño(600px, 200px);
+                                .texto{
+                                    .review{
+                                        @include tamaño(430px, 105px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+    
+                .hipervinculosEgresados{
+                    font-size: $fontSizePromedioMonitor;
+                    margin-bottom: 3mm;
+                }
+                footer{
+                    margin-top: 1cm;
+                    .pieDePagina{   //lo que no es redes//
+            
+                            font-size: $fontSizePromedioMonitor - 2px;
+                        
+                            padding-top: 2mm;
+                            .subPieDePagina{    //los datos sobre ubicacion y numeros (todo menos redes)//
+                                padding: 1.3mm;
+                                iframe{
+                                    @include tamaño(600px, 300px);
+                                }
+                            }   
+        
+                        .redes{    //los links a redes sociales//
+                            .subRedes{      //los contenedores de redes//
+                                @include tamaño(4cm, 1.8cm);
+                                
+                                .links{     //los links a redes//
+                                    font-size: 17px;
+        
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }/*fin de quering para computadoras*/
+    

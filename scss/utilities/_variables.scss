@@ -1,9 +1,9 @@
 //variable 
-$fontSizePromedioCelular: 12px;
+$fontSizePromedioCelular: 14px;
 
-$fontSizePromedioTablet: 20px;
+$fontSizePromedioTablet: 19px;
 
-
+$fontSizePromedioMonitor: 19px;
 
 
 //mixin con variables
@@ -39,3 +39,108 @@ $botonRedes:(
     fondoRedes: rgb(213, 227, 255),
     bordeRedes: 5px ridge rgb(186, 253, 255),
     );
+
+
+@mixin encabezado {
+    header{
+        //para que este sobre toda la pagina//
+        position: sticky;
+        z-index: 2;
+        top: 1mm;
+        grid-area: header;
+        margin: 5px 7mm;
+        
+        .color-encabezado{
+            border: 3px solid black;
+            border-radius: 50px;
+            background-color: rgb(102, 102, 153);
+
+            .imagen{
+                margin-left: 5mm;
+                @include tamaño(90px, 90px);
+                
+            }
+            
+            //pongo  en blanco el boton que se desliza//
+            .navbar-toggler{
+                background-color: white;
+            }
+            //son los hipervinculos del encabezado, que se ponen contra la izquierda cuando esta en pantalla del celu//
+            .palabrasEncabezado{  
+                justify-content: start;
+    
+                .nav-item{
+                    padding-left: 2mm;
+                    margin: 4mm 2mm;
+                    background-color: white; 
+                }
+            }
+        }
+    }//fin encabezado//
+}
+
+
+@mixin footer {
+    /*Pie de pagina*/
+    footer{
+        grid-area: footer;
+        margin-top: 10px;
+        .pieDePagina{//lo que no es redes//
+
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: $fontSizePromedioCelular;
+
+            border-top: 3px solid rgb(51, 51, 0);
+            background-color: rgb(177, 129, 221);
+
+            .subPieDePagina{ //los datos sobre ubicacion y numeros (todo menos redes)//
+                padding: 5px;
+                iframe{
+                    @include tamaño(300px, 150px);
+                }
+            }
+
+            .redes{//los links a redes sociales//
+
+                @include flexCentroCentro;
+                
+                @include autoEmparejamiento;
+
+                .subRedes{//los contenedores de fotos//
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                            
+                    @include tamaño(2cm, 1cm);
+
+                    margin: 0px 10px 10px;    
+
+
+                    background-color: map-get($map: $botonRedes, $key: fondoRedes);
+                    border: map-get($map: $botonRedes, $key:bordeRedes);
+
+                    font-size: $fontSizePromedioCelular+1px;
+
+                        &:hover{//para que se agranden los cuadros de redes//
+                            transform:scale(1.19);
+                            transition: 1.5s;
+                        }
+                        
+                    //los links a redes//
+                    .links{
+                        text-decoration: none;
+                        list-style: none;
+                        color: black;
+                        font-size: $fontSizePromedioCelular -1px;
+
+                    }
+                }
+            }
+        }
+    }   
+}
